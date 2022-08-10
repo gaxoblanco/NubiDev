@@ -1,0 +1,22 @@
+@import url('../AddProduct/styled.css');
+
+.container-addCart{
+    background: peru;
+    width: 90%;
+}
+.container-addCart--img{
+    display: flex;
+    height: auto;
+}
+
+
+.img-productCardSmall{
+    width:75px;
+    margin-right: 10px;
+}
+.container-addCart--number{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 40px;
+}

@@ -1,0 +1,32 @@
+.container-productCard{
+    width: 90%;
+    height: auto;
+    background: rgb(51, 34, 40);
+    display: flex;
+}
+.container-off{
+    position: absolute;
+}
+.img-productCard{
+    width:150px;
+    margin-right: 10px;
+}
+.state-product{
+    text-align: right;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 10px;
+}
+.price-product{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.btn-agregar{
+    background: #4ADE04;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
