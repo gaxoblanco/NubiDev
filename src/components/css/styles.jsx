@@ -6,6 +6,7 @@ export const Parrafo = styled.p `
     font-weight: ${({isBold})=> isBold ? 'bold' : 'normal'};
     color: ${({isGray})=> isGray ? '#807F7F' : '#020202'};
     margin-right: 4px;
+    margin-left: 4px;
 `;
 
 export const Price = styled.p `
@@ -18,3 +19,9 @@ export const OnOff = styled.div`
     display: ${({isOff})=> isOff ? 'none' : 'flex'};
 `
 
+export const Direction = styled.div`
+    width: 90%;
+    display: 'flex';
+    flex-direction: ${({isRow})=> isRow ? 'row' : 'column'};
+    background: red;
+`

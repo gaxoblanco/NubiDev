@@ -2,6 +2,8 @@
 @import url('./components/ProductCard/styled.css');
 @import url('./components/AddCart/styled.css');
 @import url('./components/CartCard/styled.css');
+@import url('./components/Search/styled.css');
+@import url('./components/Footer/styled.css');
 
 
 .icon-Black{
