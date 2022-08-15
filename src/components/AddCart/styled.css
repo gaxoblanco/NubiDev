@@ -5,14 +5,17 @@
     width: 90%;
 }
 .container-addCart--img{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
     height: auto;
 }
 
 
 .img-productCardSmall{
     width:75px;
+    height: auto;
     margin-right: 10px;
+    margin-left: 16px;
 }
 .container-addCart--number{
     width: 90%;

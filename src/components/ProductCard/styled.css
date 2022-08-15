@@ -1,12 +1,4 @@
-.container-productCard{
-    width: 90%;
-    height: auto;
-    background: rgb(51, 34, 40);
-    display: flex;
-}
-.container-off{
-    position: absolute;
-}
+
 .img-productCard{
     width:150px;
     margin-right: 10px;

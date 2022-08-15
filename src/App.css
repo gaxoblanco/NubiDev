@@ -18,6 +18,8 @@
     flex-direction: column;
     background: black;
     color: white;
+    left: 0;
+    right: 0;
 }
 .root-home{
     width: 100%;

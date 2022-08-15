@@ -1,9 +1,9 @@
 .container-cartCard{
     display: grid;
-    grid-template-columns: 1fr auto auto 1fr;
-    width: 90%;
+    grid-template-columns: auto auto 1fr 1fr;
     place-items: center;
     background: teal;
+    margin-top: 10px;
 }
 .img-cartCard{
     width:75px;
