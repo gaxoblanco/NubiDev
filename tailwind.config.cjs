@@ -11,9 +11,10 @@ module.exports = {
       },
       backgroundColor: theme =>({
         ...theme('colors'),
-        'verde': '#4ADE04',
-        'rojo': '#B70707',
-        'fourth': '#FF9D0B',
+        'primario': '#4ADE04',
+        'secundario': '#B70707',
+        'terciario': '#FF9D0B',
+        'cuarto': '#FF9D0B',
       }),
       textColor:{
         'blanco': '#F6F6F6',

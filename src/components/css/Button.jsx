@@ -6,5 +6,6 @@ export const Btn = styled.button `
     padding: 0px 8px 4px 8px;
     border-radius: 6px;
     font-weight: 600;
+    color: white;
     font-size: ${({is22})=> is22 ? '22px' : '16px'};
 `;

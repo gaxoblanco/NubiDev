@@ -1,7 +1,7 @@
 import React from 'react'
 import {Direction, Parrafo, OnOff} from '../css/styles'
 
-export const Form = ()=>{
+export const Form = ({name, email, comit})=>{
 
     return (
         <div className='bg-slate-400 pl-4'>

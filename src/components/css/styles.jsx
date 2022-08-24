@@ -53,7 +53,7 @@ export const IconStar = styled.svg`
 
 export const StateStock = styled.p`
     font-size: 1.2rem;
-    color: ${({notStock})=> notStock ? secundario : '#020202'};
+    color: ${({inStock})=> inStock ? '#A0A0A0' : secundario};
     margin-bottom: 0.4rem;
     font-weight: bold;
 `

@@ -1,19 +1,35 @@
-import React from 'react'
+import React, {useState, useMemo, useRef} from 'react'
 import {Btn} from '../css/Button'
 import {Icon} from '../css/styles'
 
 export const Search = ()=>{
 
+    const [search, setSearch] = useState('');
+    const searchInput = useRef(null);
 
+//--- filtro del buscador
+    const handleSearch = (event)=>{
+        setSearch(searchInput.current.value)
+    };
 
+    // const filteredUsers = useMemo(()=>   // tengo que consultar en la lista de productos
+    //     products.filter((user)=>{
+    //         return user.name.toLowerCase().includes(search.toLowerCase());
+    //     }), [products, search]
+    // )
+
+//---
     return (
         <span className="bg-gray-500 w-5/6 relative">
             <input 
                 className="container-search--search" 
-                type="search" 
-                placeholder={"Buscar" }
-                
+                type="text"
+                placeholder={"Buscar"}
+                value={search}
+                onChange={handleSearch}
+                ref={searchInput}
             />
+
             <Btn isBig={true} isGreen={true} is22={true} >Buscar Producto</Btn>
             <div className="search-clouse">
             <Icon isSecondaryColor={true} fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
