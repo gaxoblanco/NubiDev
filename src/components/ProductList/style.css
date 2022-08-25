@@ -1,0 +1,20 @@
+.show-element {
+    /* duracion*/
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    /* Animacion*/
+    animation-name: fadeIn;
+    background-color: rgb(225, 225, 255);
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  h1{
+    font-size: 12rem;
+  }
