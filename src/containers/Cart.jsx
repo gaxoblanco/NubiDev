@@ -12,7 +12,7 @@ export const Cart = () => {
 
   return (
     <>
-      <CartList 
+      <CartList  
         cartList={initialState.cart} 
         Off={false}
       />

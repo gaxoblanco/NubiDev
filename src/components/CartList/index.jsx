@@ -1,12 +1,16 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {CartCard} from '../CartCard';
-
+import {AddCart} from '../AddCart';
+import {Price} from '../css/styles';
 import {AppContext} from '../../context/AppContex';
 
 
 export const CartList = ({Off}) => {
-  const {state, removeFromCart} = useContext(AppContext);
+  const {state} = useContext(AppContext);
+  const [units, setUnits] = useState(false);
   const {cart} = state;
+
+  const [itemData, setItemData] = useState({})
 
   const handleSumTotal = () =>{
     const reducer = (accumulator, currentValue) => accumulator + currentValue.precio;
@@ -14,17 +18,45 @@ export const CartList = ({Off}) => {
     return sum;
   };
 
+  const handleAddToCart = product => () =>{
+    addToCart(product);
+    setUnits(false) 
+  }
+
+  const unitsProduct = (ItemUnits) =>{
+    setItemData (ItemUnits);
+  }
+
   return (
-    <div className="CartList">
-        <div className="CartList-items">
+    <div className="grid place-items-center">
+
+
+        <div className="absolute z-10 bg-slate-400">
+          {units ? 
+            <AddCart 
+              handleAddToCart = {handleAddToCart}
+              itemData = {itemData}
+              setUnits = {setUnits}
+            /> : null}
+        </div>
+    
+        <div className="grid place-items-center w-full">
             {cart.map(product =>(
                 <CartCard 
-                  key={product._id} 
-                  product={product} 
+                  key = {product._id} 
+                  product = {product} 
                   off = {Off}
+                  unitsProduct = {unitsProduct}
+                  setUnits = {setUnits}
+                  units = {units}
                 />
             ))}
         </div>
+        <Price 
+          className="w-3/4 text-right"
+          isBold={true}>
+          {`Precio Total: $ ${handleSumTotal()}`}
+        </Price>
     </div>
   )
 }

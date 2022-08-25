@@ -1,5 +1,5 @@
 // import { list } from 'postcss';
-import React, {useState, useEffect, useReducer} from 'react';
+import React from 'react';
 import {Btn} from '../css/Button';
 import {Price, Parrafo, StateStock, IconStar, OnOff} from '../css/styles';
 
