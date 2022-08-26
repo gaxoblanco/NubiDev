@@ -18,15 +18,6 @@ export const ProductList = () => {
   
   return (
       <div>
-
-        <div className="absolute z-10 bg-slate-400">
-          {units ? 
-            <AddCart 
-              itemData = {itemData}
-              setUnits = {setUnits}
-            /> : null}
-        </div>
-        
         <div>
             {products.map(product =>(
                 <ProductCard 
@@ -39,6 +30,18 @@ export const ProductList = () => {
             ))}
         </div>
 
+        <div>
+          {units ? 
+            <div 
+              event
+              // onClick={()=>{setUnits(!units)}}
+              className="fixed top-0 w-full h-full bg-green-200 grid place-items-center p-50%" >
+            <AddCart 
+              itemData = {itemData}
+              setUnits = {setUnits}
+              units = {units}
+            /></div> : null}
+        </div>
     </div>
   )
 }

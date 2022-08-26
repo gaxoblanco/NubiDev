@@ -10,8 +10,12 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
   const [units, setUnits] = useState(false);
   const {cart} = state;
 
-  const [itemData, setItemData] = useState({})
 
+ 
+ 
+  const [itemData, setItemData] = useState({})
+  // setItemData(cart.)
+  //functions
   const handleSumTotal = () =>{
     const reducer = (accumulator, currentValue) => accumulator + currentValue.totalPrice;
     const sum = cart.reduce(reducer, 0);
@@ -23,32 +27,23 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
     return sumUnits;
   }
 
-  const handleAddToCart = product => () =>{
-    addToCart(product);
-    setUnits(false) 
-  }
+
 
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
+    console.log('Item data',itemData);
   }
+
+  
 
   return (
     <div className="grid place-items-center">
 
 
-        <div className="absolute z-10 bg-slate-400">
-          {units ? 
-            <AddCart 
-              handleAddToCart = {handleAddToCart}
-              itemData = {itemData}
-              setUnits = {setUnits}
-            /> : null}
-        </div>
-    
         <div className="grid place-items-center w-full">
             {cart.map(product =>(
                 <CartCard 
-                  key = {product.itemData._id} 
+                  key = {product._id} 
                   product = {product} 
                   off = {Off}
                   unitsProduct = {unitsProduct}
@@ -91,6 +86,17 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             </div>
           </div>
         </OnOff>
+        {units ? 
+            <div 
+              event
+              // onClick={()=>{setUnits(!units)}}
+              className="fixed top-0 w-full h-full bg-green-200 grid place-items-center p-50%" >
+            <AddCart 
+              itemData = {itemData}
+              setUnits = {setUnits}
+              units = {units}
+            />
+          </div> : null}
         
     </div>
   )
