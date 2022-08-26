@@ -11,9 +11,9 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
 
     return (
         <section className="container-cartCard w-11/12">
-            <img className='img-cartCard' src={product.imagen} />
+            <img className='img-cartCard' src={product.itemData.imagen} />
             <div className="cartCard-description">
-                <Parrafo is16={true} positionLeft={true}>{product.codigo}</Parrafo>
+                <Parrafo is16={true} positionLeft={true}>{product.itemData.codigo}</Parrafo>
             </div>
             <OnOff isOff={off}>
                 <button 
@@ -28,7 +28,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
             </OnOff>
             <div>
                 <div className="cartCard-units">
-                    <Parrafo isGray={true} isBold={true}>5</Parrafo>
+                    <Parrafo isGray={true} isBold={true}>{product.units}</Parrafo>
                     <Parrafo isGray={true}>unidades</Parrafo>
                     <OnOff>
                         <button type="button" onClick={handleDeleteToCart(product)}>
@@ -38,7 +38,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
                         </button>
                     </OnOff>
                 </div>
-                <Price >${product.precio}</Price>
+                <Price >${product.totalPrice}</Price>
             </div>
         </section>
     )

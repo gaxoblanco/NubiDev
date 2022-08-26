@@ -13,15 +13,15 @@ export const ProductList = () => {
   const [itemData, setItemData] = useState({})
 
 
-  const handleAddToCart = product => () =>{
-    addToCart(product);
-    setUnits(false) 
-  }
+
+  // const handleAddToCart = product => () =>{
+  //   addToCart(product);
+  //   setUnits(false) 
+  // }
 
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
   }
-
   
   return (
       <div>
@@ -29,7 +29,7 @@ export const ProductList = () => {
         <div className="absolute z-10 bg-slate-400">
           {units ? 
             <AddCart 
-              handleAddToCart = {handleAddToCart}
+              // handleAddToCart = {handleAddToCart}
               itemData = {itemData}
               setUnits = {setUnits}
             /> : null}

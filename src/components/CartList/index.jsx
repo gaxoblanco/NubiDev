@@ -13,7 +13,7 @@ export const CartList = ({Off}) => {
   const [itemData, setItemData] = useState({})
 
   const handleSumTotal = () =>{
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.precio;
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.totalPrice;
     const sum = cart.reduce(reducer, 0);
     return sum;
   };
@@ -43,7 +43,7 @@ export const CartList = ({Off}) => {
         <div className="grid place-items-center w-full">
             {cart.map(product =>(
                 <CartCard 
-                  key = {product._id} 
+                  key = {product.itemData._id} 
                   product = {product} 
                   off = {Off}
                   unitsProduct = {unitsProduct}
