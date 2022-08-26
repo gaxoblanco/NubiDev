@@ -7,17 +7,10 @@ import './style.css';
 
 export const ProductList = () => {
   const [units, setUnits] = useState(false);
-  const {state, addToCart} = useContext(AppContext);
+  const {state} = useContext(AppContext);
   const {products} = state;
 
   const [itemData, setItemData] = useState({})
-
-
-
-  // const handleAddToCart = product => () =>{
-  //   addToCart(product);
-  //   setUnits(false) 
-  // }
 
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
@@ -29,7 +22,6 @@ export const ProductList = () => {
         <div className="absolute z-10 bg-slate-400">
           {units ? 
             <AddCart 
-              // handleAddToCart = {handleAddToCart}
               itemData = {itemData}
               setUnits = {setUnits}
             /> : null}

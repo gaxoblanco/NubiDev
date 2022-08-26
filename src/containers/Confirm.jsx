@@ -11,6 +11,8 @@ export const Confirm = () => {
       <CartList 
         cartList={initialState.cartList} 
         Off={true}
+        precioTotal={true}
+        unitTotal={false}
       />
       </Form>
     </>

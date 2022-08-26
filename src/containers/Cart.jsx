@@ -15,6 +15,7 @@ export const Cart = () => {
       <CartList  
         cartList={initialState.cart} 
         Off={false}
+        unitTotal={true}
       />
       <Link to={'/carrito/confirmar'}>
         <Btn 

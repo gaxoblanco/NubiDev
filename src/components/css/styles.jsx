@@ -23,7 +23,7 @@ export const Price = styled.p `
 `;
 
 export const OnOff = styled.div`
-    display: ${({isOff})=> isOff ? 'none' : 'flex'};
+    display: ${({isOff})=> isOff ? 'none' : 'grid'};
 
 `
 

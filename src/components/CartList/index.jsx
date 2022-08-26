@@ -1,11 +1,11 @@
 import React, {useContext, useState} from 'react';
 import {CartCard} from '../CartCard';
 import {AddCart} from '../AddCart';
-import {Price} from '../css/styles';
+import {OnOff, Price, Parrafo} from '../css/styles';
 import {AppContext} from '../../context/AppContex';
 
 
-export const CartList = ({Off}) => {
+export const CartList = ({Off, precioTotal, unitTotal}) => {
   const {state} = useContext(AppContext);
   const [units, setUnits] = useState(false);
   const {cart} = state;
@@ -17,6 +17,11 @@ export const CartList = ({Off}) => {
     const sum = cart.reduce(reducer, 0);
     return sum;
   };
+  const handleSumUnits = ()=>{
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.units;
+    const sumUnits = cart.reduce(reducer, 0);
+    return sumUnits;
+  }
 
   const handleAddToCart = product => () =>{
     addToCart(product);
@@ -52,11 +57,41 @@ export const CartList = ({Off}) => {
                 />
             ))}
         </div>
-        <Price 
-          className="w-3/4 text-right"
-          isBold={true}>
-          {`Precio Total: $ ${handleSumTotal()}`}
-        </Price>
+        <OnOff isOff={precioTotal}>
+          <Price 
+            className="w-full text-right "
+            isBold={true}>
+            {`Precio Total: $${handleSumTotal()}`}
+          </Price>
+        </OnOff>
+        <OnOff className="w-full" isOff={unitTotal}>
+          <Parrafo 
+            className="w-1/3 text-left mt-2"
+            isBold= {true}
+            is16={true}>
+            Total de la Orden
+          </Parrafo>
+
+          <div className="grid grid-cols-2 w-full mt-2">
+            <div className="flex ml-4">
+              <Price isBold= {true}>{handleSumUnits()}</Price>
+              <Parrafo 
+                is16={true}
+                className="mt-6 pl-2">
+                Unidades
+              </Parrafo>
+            </div>
+            <div className="grid grid-cols-2 mr-12">
+              <Parrafo 
+                is16={true}
+                className="mt-6 ">
+                Total:
+              </Parrafo>
+              <Price isBold= {true}>${handleSumTotal()}</Price>
+            </div>
+          </div>
+        </OnOff>
+        
     </div>
   )
 }

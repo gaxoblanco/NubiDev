@@ -10,7 +10,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
     }
 
     return (
-        <section className="container-cartCard w-11/12">
+        <section className="container-cartCard w-full">
             <img className='img-cartCard' src={product.itemData.imagen} />
             <div className="cartCard-description">
                 <Parrafo is16={true} positionLeft={true}>{product.itemData.codigo}</Parrafo>
@@ -26,6 +26,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
                     </Icon>
                 </button>
             </OnOff>
+            <OnOff isOff={!off}></OnOff>
             <div>
                 <div className="cartCard-units">
                     <Parrafo isGray={true} isBold={true}>{product.units}</Parrafo>
