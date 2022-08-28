@@ -10,7 +10,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
     }
 
     return (
-        <section className="container-cartCard w-full bg-slate-100 relative">
+        <section className="container-cartCard w-full bg-slate-100 relative rounded-lg">
             <img className='img-cartCard' src={product.itemData.imagen} />
             <div className="cartCard-description">
                 <Parrafo is16={true} positionLeft={true}>{product.itemData.codigo}</Parrafo>

@@ -31,7 +31,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
 
     return(
         <span>
-        <div className="bg-blue-200 mx-12">
+        <div className="bg-slate-100 relative mx-12 rounded-lg">
             <div className="container-addCart--img relative">
                 <img className="img-productCardSmall mt-6" src="https://sublitextil.com.ar/wp-content/uploads/2019/01/gorra-1.png" />
                 <Parrafo 

@@ -65,7 +65,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             Total de la Orden
           </Parrafo>
 
-          <div className="grid grid-cols-2 mt-2 bg-slate-100">
+          <div className="grid grid-cols-2 mt-2 bg-slate-100 rounded-lg">
             <div className="flex ml-4">
               <Price isBold= {true}>{handleSumUnits()}</Price>
               <Parrafo 

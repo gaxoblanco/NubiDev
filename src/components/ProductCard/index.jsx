@@ -11,7 +11,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
 
     return (
         <div className="w-11/12 relative">
-            <section className=" flex bg-slate-100">
+            <section className=" flex bg-slate-100 rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-r-lg"
                     isOff={product.precioOferta ? false : true}
