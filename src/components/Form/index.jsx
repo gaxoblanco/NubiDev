@@ -23,7 +23,7 @@ export const Form = ({children})=>{
     }
 
     return (
-        <div className=''>
+        <div className='pl-4 pr-4 bg-slate-100'>
         <form ref={form} >
             <Parrafo 
                 positionLeft={true} 

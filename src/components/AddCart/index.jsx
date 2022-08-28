@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import {AddProduct} from '../AddProduct/index';
 import {Btn} from '../css/Button';
 import {Price, Parrafo, Icon} from '../css/styles';
@@ -9,37 +9,43 @@ export const AddCart = ({units, setUnits, itemData})=>{
     
     //unidades y precio total segun unidades
     const [unit, setUnit] = useState(1);
-    const total = (itemData.precio * unit);
+    const total = ((itemData.precio ? itemData.precio : itemData.itemData.precio) * unit);
 
     const item = {
+        _id: itemData._id,
         itemData,
         units: unit,
         totalPrice: total
     }
-    //valido si tengo un totalPrice
-    if (itemData.totalPrice != null){
-        item.totalPrice = itemData.totalPrice
-        setUnits((itemData.units))
-        console.log('addCart', itemData.units);
-    }
+
+    useEffect(()=>{
+        if (itemData.totalPrice != null){
+            item._id = itemData.itemData._id;
+            setUnit(itemData.units);
+            item.itemData = itemData.itemData;
+        }
+    }, [])
 
 //agrego al carrito itemData
     const handleAddToCart = item => () =>{
       addToCart(item);
       setUnits(false) 
     }
-
+    
+    
     return(
         <span>
         <div className="bg-slate-100 relative mx-12 rounded-lg">
             <div className="container-addCart--img relative">
-                <img className="img-productCardSmall mt-6" src="https://sublitextil.com.ar/wp-content/uploads/2019/01/gorra-1.png" />
+                <img 
+                    className="img-productCardSmall mt-6" 
+                    src="https://sublitextil.com.ar/wp-content/uploads/2019/01/gorra-1.png" />
                 <Parrafo 
                     className="mt-6"
                     is16={true} 
                     positionLeft={true} 
                 >
-                    {itemData.descripcion} 
+                    {itemData.descripcion ? itemData.descripcion : itemData.itemData.descripcion} 
                 </Parrafo>
                 <button 
                     className="absolute top-0  right-0 z-10"
@@ -53,9 +59,9 @@ export const AddCart = ({units, setUnits, itemData})=>{
             </div>
             <div className="container-addCart--number">
                 <AddProduct
-                    unit={unit}
+                    unit={item.units != null ? item.units : unit}
                     setUnit={setUnit}
-                    stock={itemData.stock}
+                    stock={itemData.stock == null ? itemData.itemData.stock : itemData.stock}
                  />
                 <Price >${item.totalPrice}</Price>
             </div>

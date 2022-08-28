@@ -4,7 +4,7 @@ import {Parrafo} from '../css/styles'
 export const Footer = ()=>{
 
     return(
-        <footer className="container-footer bg-slate-100">
+        <footer className="container-footer bg-slate-100 mt-4">
             <div className="">
                 <Parrafo positionLeft={true}>Direccion :  una hermosa calle al 000 CABA</Parrafo>
                 <Parrafo positionLeft={true}>Correo: store@tienda.com </Parrafo>
