@@ -3,17 +3,13 @@
     width:150px;
     margin-right: 10px;
 }
-.state-product{
+/* .state-product{
     text-align: right;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     margin-top: 10px;
-}
+} */
 .price-product{
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .btn-agregar{

@@ -10,7 +10,7 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
     }
 
     return (
-        <section className="container-cartCard w-full">
+        <section className="container-cartCard w-full bg-slate-100 relative">
             <img className='img-cartCard' src={product.itemData.imagen} />
             <div className="cartCard-description">
                 <Parrafo is16={true} positionLeft={true}>{product.itemData.codigo}</Parrafo>
@@ -18,7 +18,6 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
             <OnOff isOff={off}>
                 <button 
                     type='button' 
-                    className=""
                     onClick={()=>{setUnits(!units), unitsProduct(product)}}
                 >
                     <Icon is32={true} viewBox="0 0 16 16" fill="currentColor" >
@@ -27,20 +26,21 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
                 </button>
             </OnOff>
             <OnOff isOff={!off}></OnOff>
-            <div>
-                <div className="cartCard-units">
+            <div className="mr-2">
+                <div className="flex mt-6">
                     <Parrafo isGray={true} isBold={true}>{product.units}</Parrafo>
                     <Parrafo isGray={true}>unidades</Parrafo>
-                    <OnOff>
-                        <button type="button" onClick={handleDeleteToCart(product)}>
-                            <Icon isSecondaryColor={true} viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                            </Icon>
-                        </button>
-                    </OnOff>
+
                 </div>
-                <Price >${product.totalPrice}</Price>
+                <Price className="" >${product.totalPrice}</Price>
             </div>
+            <OnOff className="absolute top-0 right-0">
+                <button type="button" onClick={handleDeleteToCart(product)}>
+                    <Icon isSecondaryColor={true} viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                    </Icon>
+                </button>
+            </OnOff>
         </section>
     )
 }

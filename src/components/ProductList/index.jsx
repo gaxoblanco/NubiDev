@@ -18,7 +18,7 @@ export const ProductList = () => {
   
   return (
       <div>
-        <div>
+        <div className="pt-4 grid place-items-center space-y-4 pb-4">
             {products.map(product =>(
                 <ProductCard 
                   key={product._id} 
@@ -35,7 +35,7 @@ export const ProductList = () => {
             <div 
               event
               // onClick={()=>{setUnits(!units)}}
-              className="fixed top-0 w-full h-full bg-green-200 grid place-items-center p-50%" >
+              className="fixed top-0 w-full h-full bg-transparent grid place-items-center " >
             <AddCart 
               itemData = {itemData}
               setUnits = {setUnits}

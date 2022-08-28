@@ -13,8 +13,9 @@ module.exports = {
         ...theme('colors'),
         'primario': '#4ADE04',
         'secundario': '#B70707',
-        'terciario': '#FF9D0B',
+        // 'terciario': '#FF9D0B',
         'cuarto': '#FF9D0B',
+        'transparent': 'rgba(167, 167, 167, 0.67)',
       }),
       textColor:{
         'blanco': '#F6F6F6',

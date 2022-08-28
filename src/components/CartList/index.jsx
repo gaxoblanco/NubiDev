@@ -37,10 +37,8 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
   
 
   return (
-    <div className="grid place-items-center">
-
-
-        <div className="grid place-items-center w-full">
+    <div className="pt-4 grid place-items-center space-y-4 pb-4">
+        <div className="grid place-items-center w-11/12">
             {cart.map(product =>(
                 <CartCard 
                   key = {product._id} 
@@ -59,7 +57,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             {`Precio Total: $${handleSumTotal()}`}
           </Price>
         </OnOff>
-        <OnOff className="w-full" isOff={unitTotal}>
+        <OnOff className="w-11/12" isOff={unitTotal}>
           <Parrafo 
             className="w-1/3 text-left mt-2"
             isBold= {true}
@@ -67,7 +65,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             Total de la Orden
           </Parrafo>
 
-          <div className="grid grid-cols-2 w-full mt-2">
+          <div className="grid grid-cols-2 mt-2 bg-slate-100">
             <div className="flex ml-4">
               <Price isBold= {true}>{handleSumUnits()}</Price>
               <Parrafo 
@@ -76,7 +74,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
                 Unidades
               </Parrafo>
             </div>
-            <div className="grid grid-cols-2 mr-12">
+            <div className="grid grid-cols-2 mr-4">
               <Parrafo 
                 is16={true}
                 className="mt-6 ">
@@ -90,7 +88,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             <div 
               event
               // onClick={()=>{setUnits(!units)}}
-              className="fixed top-0 w-full h-full bg-green-200 grid place-items-center p-50%" >
+              className="fixed top-0 w-full h-full bg-transparent grid place-items-center p-50%" >
             <AddCart 
               itemData = {itemData}
               setUnits = {setUnits}

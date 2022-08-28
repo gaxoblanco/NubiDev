@@ -1,12 +1,10 @@
 .ButtonCart{
-    background: rgba(128, 128, 128, 0.808);
     border-radius: 50%;
     width: 7.4rem;
     height: 7.4rem;
-    position: absolute;
+    position: fixed;
     right: 20px;
-    bottom: 20px;
-    border: solid 1px gray;
+    bottom: 60px;
 }
 .ButtonCart svg {
     left: 0;
@@ -14,6 +12,7 @@
     margin: 0 auto;
     width: 5rem;
     height: 5rem;
+    
 }
 .ButtonCart p {
     font-size: 1.8rem;
