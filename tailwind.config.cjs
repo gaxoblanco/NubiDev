@@ -20,7 +20,8 @@ module.exports = {
       textColor:{
         'blanco': '#F6F6F6',
         'negro': '#0A0909',
-        'gris': '#A0A0A0',
+        'primario': '#4ADE04',
+        'terciario': '#A0A0A0',
         'amarillo': '#FFB800',
       },
       fontFamily:{
