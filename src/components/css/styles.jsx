@@ -42,7 +42,7 @@ export  const Article = styled.article`
 
 export const Icon = styled.svg`
     width: ${({is32})=>is32 ? '3.2rem' : '1.8rem'};
-    height: auto;
+    height: ${({is32})=>is32 ? '3.2rem' : '1.8rem'};
     color: ${({isSecondaryColor})=>isSecondaryColor ? secundario : primario}
 `
 export const IconStar = styled.svg`

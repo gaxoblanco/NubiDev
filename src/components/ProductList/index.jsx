@@ -21,6 +21,7 @@ export const ProductList = () => {
         <div className="pt-4 grid place-items-center space-y-4 pb-4">
             {products.map(product =>(
                 <ProductCard 
+                  // className="productList2"
                   key={product._id} 
                   product={product} 
                   units={units}

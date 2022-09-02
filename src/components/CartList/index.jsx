@@ -31,7 +31,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
 
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
-    console.log('Item data',itemData);
+    console.log('CartList Item data',itemData);
   }
 
   

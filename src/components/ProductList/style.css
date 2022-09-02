@@ -1,3 +1,8 @@
+/* .productList2:last-child{
+  margin-bottom:50px;
+  background: red;
+} */
+
 .show-element {
     /* duracion*/
     animation-duration: 2s;

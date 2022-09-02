@@ -5,7 +5,7 @@ import {Price, Parrafo, Icon} from '../css/styles';
 import {AppContext} from '../../context/AppContex';
 
 export const AddCart = ({units, setUnits, itemData})=>{
-    const {state, addToCart} = useContext(AppContext);
+    const {state, addToCart, edditToCart} = useContext(AppContext);
     
     //unidades y precio total segun unidades
     const [unit, setUnit] = useState(1);
@@ -13,16 +13,17 @@ export const AddCart = ({units, setUnits, itemData})=>{
 
     const item = {
         _id: itemData._id,
-        itemData,
         units: unit,
-        totalPrice: total
+        totalPrice: total,
+        itemData,
     }
 
     useEffect(()=>{
         if (itemData.totalPrice != null){
-            item._id = itemData.itemData._id;
+            item._id = itemData._id;
             setUnit(itemData.units);
             item.itemData = itemData.itemData;
+            console.log('itemData',itemData.itemData._id);
         }
     }, [])
 
@@ -30,6 +31,10 @@ export const AddCart = ({units, setUnits, itemData})=>{
     const handleAddToCart = item => () =>{
       addToCart(item);
       setUnits(false) 
+    }
+    const handleEdditToProduct = item =>() =>{
+        edditToCart(item);
+        setUnits(false) 
     }
     
     
@@ -72,6 +77,14 @@ export const AddCart = ({units, setUnits, itemData})=>{
                 type="button"
                 onClick={handleAddToCart(item)}
                 >Agregar al Carrito
+            </Btn>
+            <Btn 
+                isBig={true} 
+                isGreen={true} 
+                is22={true}
+                type="button"
+                onClick={handleEdditToProduct(item)}
+                >Editar carrito
             </Btn>
         </div>
         </span>
