@@ -21,7 +21,10 @@ export const Form = ({children})=>{
         }
         const order= {
             buyer,
-            productList
+            productList,
+            paid: false,
+            submit: false,
+            id: buyer.name,
         }
         
         addToOrders(order)
