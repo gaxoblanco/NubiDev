@@ -1,18 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {OrdenDetail} from '../OrdenDetail';
 import {Icon, Parrafo} from '../css/styles';
 import {Btn} from '../css/Button';
 import './styled.css'
 
 export const OrdersCard = () => {
+
+    const {open, close} = useState(false);
+
+
   return (
     <section>
-        <div className="OrdersCard bg-slate-400 p-4">
-            <div className="w-10 h-10 mr-20">
+        <div className="OrdersCard bg-slate-200 p-4 mt-4">
+            <button 
+                type="button"
+                // onClick={}
+                className="w-10 h-10 mr-20">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
                 </svg>
-            </div>
+            </button>
             <div className="flex ">
             {/*    <Icon className="w-10 h-10">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bg-red" viewBox="0 0 16 16">
@@ -44,7 +51,12 @@ export const OrdersCard = () => {
             </div>
 
             <div className="Si el cliente quiere ve mas datos">
-                <OrdenDetail></OrdenDetail>
+                {/* <OrdenDetail
+                    // product= {product}
+                    // unitsProduct= {unitsProduct}
+                    // setUnits= {setUnits}
+                    // units= {units}
+                ></OrdenDetail> */}
             </div>
         </div>
     </section>

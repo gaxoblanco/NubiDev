@@ -10,7 +10,6 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
   const [units, setUnits] = useState(false);
   const {cart} = state;
 
-
  
  
   const [itemData, setItemData] = useState({})
@@ -31,7 +30,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
 
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
-    console.log('CartList Item data',itemData);
+    // console.log('CartList Item data',itemData);
   }
 
   

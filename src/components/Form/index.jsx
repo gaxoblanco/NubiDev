@@ -5,21 +5,29 @@ import {Btn} from '../css/Button'
 import {AppContext} from '../../context/AppContex';
 
 export const Form = ({children})=>{
-    const {state, addToBuyer} = useContext(AppContext);
+    const {state, addToOrders} = useContext(AppContext);
     const form = useRef(null);
-    const history = useHistory();
+    const {cart} = state;
+    // const history = useHistory();
 
+    //Guardo la informacion del Array de Cart en el array de Orders
     const handleSubmit = () =>{
+        const productList = cart
         const formData = new FormData(form.current)
         const buyer = {
             'name': formData.get('name'),
             'email': formData.get('email'),
             'comit': formData.get('comit'),
         }
-        console.log(buyer);
+        const order= {
+            buyer,
+            productList
+        }
+        
+        addToOrders(order)
 
-        addToBuyer(buyer);
-        history.push('/')
+        // console.log(state);
+        // console.log('order', order);
     }
 
     return (
@@ -59,14 +67,16 @@ export const Form = ({children})=>{
             />
         </form>
         {children}
-        <Btn
-            type="button"
-            className="mt-4 mb-4"
-            isBig= {true}
-            isGreen= {true}
-            is22= {true}
-            onClick={handleSubmit}
-        >Confirmar</Btn>
+        <Link to={'/ordenes'}>
+            <Btn
+                type="button"
+                className="mt-4 mb-4"
+                isBig= {true}
+                isGreen= {true}
+                is22= {true}
+                onClick={handleSubmit}
+            >Confirmar</Btn>
+        </Link>
         </div>
     )
 }

@@ -8,12 +8,12 @@ export const Confirm = () => {
   return (
     <>
       <Form>
-      <CartList 
-        cartList={initialState.cartList} 
-        Off={true}
-        precioTotal={true}
-        unitTotal={false}
-      />
+        <CartList 
+          cartList={initialState.cartList} 
+          Off={true}
+          precioTotal={true}
+          unitTotal={false}
+        />
       </Form>
     </>
   )

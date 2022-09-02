@@ -23,7 +23,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
             item._id = itemData._id;
             setUnit(itemData.units);
             item.itemData = itemData.itemData;
-            console.log('itemData',itemData.itemData._id);
+            // console.log('itemData',itemData.itemData._id);
         }
     }, [])
 

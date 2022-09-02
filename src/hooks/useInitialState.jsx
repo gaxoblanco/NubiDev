@@ -4,22 +4,18 @@ import initialState from '../initialState'
 export const useInitialState = () => {
     const [state, setState] = useState(initialState)
 
-    const addToCart = payload => {
-     
+    const addToCart = payload => {    
         setState({
             ...state,
             cart: [...state.cart, payload]
         });
     };
-
     const removeFromCart = payload => {
         setState({
             ...state,
             cart: state.cart.filter (items => items._id != payload._id)
         });
     };
-
-
     const edditToCart = payload => {
         console.log('paylodad', payload.itemData);
         console.log('total', payload.totalPrice);
@@ -32,32 +28,22 @@ export const useInitialState = () => {
             ...state,
             cart: state.cart.findIndex (items => items.itemData._id === payload.itemData._id)
         });
-        console.log(state.cart);
-
-
-
-        // if(payload._id == product._id){
-        //     product.precioTotal = payload.precioTotal,
-        //     product.units = payload.units
-        // }
-        
     }
-    
 
- 
-    const addToBuyer = payload => {
+    //Orders - va en otro archivo este Hook, pero por lo visto no entiendo algun detalle porque no me logre conectar el otro hook.
+    const addToOrders = payload => {    
         setState({
             ...state,
-            buyer: [...state.buyer, payload]
-        })
-    }
+            orders: [...state.orders, payload]
+        });
+    };
 
 
 
   return {
     addToCart,
     removeFromCart,
-    addToBuyer,
+    addToOrders,
     edditToCart,
     state,
   }

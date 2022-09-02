@@ -2,9 +2,9 @@ import React, {useContext, useState} from 'react'
 import {AppContext} from '../../context/AppContex';
 import {CartCard} from '../CartCard';
 
-export const OrdenDetail = () => {
+export const OrdenDetail = ({product, unitsProduct, setUnits, units}) => {
   const {state} = useContext(AppContext);
-  const {cart} = state;
+  const {orders} = state;
 
   console.log(product);
 
@@ -14,7 +14,7 @@ export const OrdenDetail = () => {
     <p>nombre</p>
     <p>Email</p>
 
-    {cart.map(product =>(
+    {orders.map(product =>(
         <CartCard 
           key = {product._id} 
           product = {product} 

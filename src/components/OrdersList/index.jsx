@@ -1,23 +1,22 @@
 import React, {useContext} from 'react';
 import {AppContext} from '../../context/AppContex';
 import {Btn} from '../css/Button';
+import {Parrafo} from '../css/styles';
 import {OrdersCard}  from '../OrdersCard';
 
 export const OrdersList = () => {
-
   const {state} = useContext(AppContext);
   const {orders} = state;
+
+    //obtengo un array: buyer, productList
+  console.log('orders-productList', orders);
 
   return (
     <div>
       {orders.map(product =>(
         <OrdersCard 
-          key = {product._id} 
+          key = {1} 
           product = {product} 
-          off = {Off}
-          unitsProduct = {unitsProduct}
-          setUnits = {setUnits}
-          units = {units}
         />
       ))}
 
@@ -27,7 +26,7 @@ export const OrdersList = () => {
         is22={true}
       >
         Seguir Comprando
-      </Btn>
+      </Btn> 
     </div>
   )
 }
