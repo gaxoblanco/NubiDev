@@ -59,7 +59,7 @@ export default {
       },
       {
         '_id': '4',
-        'nombre': 'Calcomania',
+        'nombre': 'media',
         "slug": "calcoPalzi-1",
         "codigo": "PR001",
         "precio": 142.50, 
@@ -77,7 +77,7 @@ export default {
       },
       {
         '_id': '5',
-        'nombre': 'Calcomania',
+        'nombre': 'Zapatilla',
         "slug": "calcoPalzi-1",
         "codigo": "PR001",
         "precio": 142.50, 
@@ -112,5 +112,4 @@ export default {
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ]
       },
     ],
-
   };

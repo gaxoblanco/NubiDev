@@ -10,6 +10,10 @@ export const ProductList = () => {
   const {state} = useContext(AppContext);
   const {products} = state;
 
+  //convierto el JSON en array
+  // const Arrayproducts = JSON.stringify(products);
+  console.log('filtrande',products.filter(item => item.nombre === 'Taza'));
+
   const [itemData, setItemData] = useState({})
 
   const unitsProduct = (ItemUnits) =>{

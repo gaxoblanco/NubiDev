@@ -63,7 +63,7 @@ export const OrderDetail = ({product, name, email}) => {
         <Btn 
           className="m-2"
           type="button">
-            Modiicar Orden
+            Modificar Orden
           </Btn>
         <div></div>
         <Price className="flex" is16={true} isBold={true}>

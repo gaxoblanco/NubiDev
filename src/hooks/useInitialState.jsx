@@ -17,9 +17,10 @@ export const useInitialState = () => {
         });
     };
     const edditToCart = payload => {
-        console.log('paylodad', payload.itemData);
+        console.log('payload', payload.itemData);
         console.log('total', payload.totalPrice);
         //busco el index del elemento a modificar 
+        
         const index = state.cart.findIndex (items => items.itemData._id === payload.itemData._id);
         console.log('index', index);
 
