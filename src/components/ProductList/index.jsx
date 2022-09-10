@@ -6,9 +6,10 @@ import {AppContext} from '../../context/AppContex';
 import './style.css';
 
 export const ProductList = () => {
-  const [units, setUnits] = useState(false);
-  const {state} = useContext(AppContext);
+  const [units, setUnits] = useState(Boolean);
+  const {state } = useContext(AppContext);
   const {products} = state;
+  const {searchProducts} = state;
 
   //convierto el JSON en array
   // const Arrayproducts = JSON.stringify(products);
@@ -19,13 +20,13 @@ export const ProductList = () => {
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
   }
+  console.log('searchProdcuts desde produclist',products);
   
   return (
       <div>
         <div className="pt-4 grid place-items-center space-y-4 pb-4">
             {products.map(product =>(
                 <ProductCard 
-                  // className="productList2"
                   key={product._id} 
                   product={product} 
                   units={units}

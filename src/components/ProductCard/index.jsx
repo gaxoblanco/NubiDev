@@ -10,7 +10,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
 
 
     return (
-        <div className="w-11/12 relative">
+        <div className="w-11/12 relative transition transition-all duration-500 ease-in-out hover:scale-105">
             <section className=" flex bg-slate-100 rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-r-lg"

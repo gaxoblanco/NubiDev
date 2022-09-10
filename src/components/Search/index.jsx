@@ -2,10 +2,11 @@ import React, {useState, useMemo, useRef} from 'react'
 import {Btn} from '../css/Button'
 import {Icon} from '../css/styles'
 
-export const Search = ({open, setOpen, search, setSearch,})=>{
-
+export const Search = ({open, setOpen, searchValue, setSearchValue, handleSearch})=>{
+    
     const onSearchValueChange = (event)=>{
-        setSearch(event.target.value);
+        console.log('desde el Search',event.target.value);
+         setSearchValue(event.target.value);
     }
 
     return (
@@ -15,7 +16,7 @@ export const Search = ({open, setOpen, search, setSearch,})=>{
                     className="container-search--search mt-4" 
                     type="text"
                     placeholder={"Buscar"}
-                    value={search}
+                    value={searchValue}
                     onChange={onSearchValueChange}
                 />
                 
@@ -28,7 +29,13 @@ export const Search = ({open, setOpen, search, setSearch,})=>{
                 </button>
             </div>
 
-            <Btn isBig={true} isGreen={true} is22={true} >Buscar Producto</Btn>
+            <Btn 
+                onClick={()=> handleSearch()}
+                isBig={true} 
+                isGreen={true} 
+                is22={true} >
+                    Buscar Producto
+            </Btn>
         </span>
     )
 }

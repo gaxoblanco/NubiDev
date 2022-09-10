@@ -2,6 +2,7 @@ export default {
     cart: [],
     buyer: [],
     orders: [],
+    searchProducts: [],
     products: [
       {
         '_id': '1',
@@ -41,7 +42,7 @@ export default {
       },
       {
         '_id': '3',
-        'nombre': 'Pin',
+        'nombre': 'Taza',
         "slug": "pin-1",
         "codigo": "PR001",
         "precio": 100.50, 

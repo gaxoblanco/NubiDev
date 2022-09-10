@@ -3,6 +3,7 @@ import initialState from '../initialState'
 
 export const useInitialState = () => {
     const [state, setState] = useState(initialState)
+    // const [search, setSearch] = useState(initialState)
 
     const addToCart = payload => {    
         setState({
@@ -21,7 +22,8 @@ export const useInitialState = () => {
         console.log('total', payload.totalPrice);
         //busco el index del elemento a modificar 
         
-        const index = state.cart.findIndex (items => items.itemData._id === payload.itemData._id);
+        const index = state.cart.findIndex 
+            (items => items.itemData._id === payload.itemData._id);
         console.log('index', index);
 
         
@@ -39,6 +41,15 @@ export const useInitialState = () => {
         });
     };
 
+    const searchProducts = payload=>{
+        console.log('hooks0', state.searchProducts);
+        setState({
+            ...state,
+            searchProducts: [...state.searchProducts, payload]
+        })
+        console.log('hooks', state.searchProducts);
+      }
+
 
 
   return {
@@ -46,6 +57,7 @@ export const useInitialState = () => {
     removeFromCart,
     addToOrders,
     edditToCart,
+    searchProducts,
     state,
   }
 }
