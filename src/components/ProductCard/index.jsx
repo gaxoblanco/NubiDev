@@ -12,6 +12,11 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
 
     return (
         <div className="max-w-3xl mx-4 relative duration-500 ease-in-out hover:scale-105">
+            <Link 
+                onClick={()=> unitsProduct(product)} 
+                className="absolute h-full w-10/12"
+                to='/detalleproducto' >
+            </Link>
             <section className=" flex bg-slate-100 rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-r-lg"
@@ -20,8 +25,10 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                     <p className="decoration-slate-200 text-base">{product.precioOferta} % Off</p>
                 </OnOff>
                 <img className="img-productCard" src={product.imagen} />
-                <Link onClick={()=> unitsProduct(product)} to='/detalleproducto' >
-                    <Parrafo is16={true} positionLeft={true}>{product.descripcion}
+                <div>
+                    <Parrafo 
+                        is16={true} 
+                        positionLeft={true}>{product.descripcion}
                     </Parrafo>
                     <div className="flex text-left mt-10 relative">
                         <Price>${product.precio}</Price>
@@ -39,7 +46,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                             </Btn>
                         </div>
                     </div>
-                </Link>
+                </div>
             </section>
             <a href="#" className="absolute top-0 right-0">
                 <IconStar isOn={false} fill="currentColor" className="bi bi-star-fill" viewBox="0 0 16 16">

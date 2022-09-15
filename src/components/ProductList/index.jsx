@@ -20,7 +20,7 @@ export const ProductList = () => {
   
   return (
       <article>
-        <div className="pt-4 grid place-items-center space-y-4 pb-4">
+        <div className="pt-4 grid place-items-center space-y-4 pb-4 mb-28">
             {products.map(product =>(
                 <ProductCard 
                   key={product._id} 
