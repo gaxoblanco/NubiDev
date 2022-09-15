@@ -36,8 +36,7 @@ export const Direction = styled.div`
 export  const Article = styled.article`
     width: 100%;
     display: "felx";
-    margin : 0 5% ;
-    
+    margin : 0 5% ;  
 `
 
 export const Icon = styled.svg`

@@ -1,0 +1,14 @@
+.productDetail{
+    text-align:left;
+}
+.productDetail-Section{
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+    text-align: left;
+    position: relative;
+}
+.productDetail-buttonMoreData{
+    font-size: 1.6rem;
+    border-radius: 1rem 1rem 0 0;
+}
+

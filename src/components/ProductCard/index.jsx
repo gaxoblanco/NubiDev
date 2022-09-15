@@ -1,16 +1,17 @@
 // import { list } from 'postcss';
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {Btn} from '../css/Button';
 import {Price, Parrafo, StateStock, IconStar, OnOff} from '../css/styles';
 
 
 
 export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
-
+    
 
 
     return (
-        <div className="w-11/12 relative transition transition-all duration-500 ease-in-out hover:scale-105">
+        <div className="max-w-3xl mx-4 relative duration-500 ease-in-out hover:scale-105">
             <section className=" flex bg-slate-100 rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-r-lg"
@@ -19,7 +20,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                     <p className="decoration-slate-200 text-base">{product.precioOferta} % Off</p>
                 </OnOff>
                 <img className="img-productCard" src={product.imagen} />
-                <div>
+                <Link onClick={()=> unitsProduct(product)} to='/detalleproducto' >
                     <Parrafo is16={true} positionLeft={true}>{product.descripcion}
                     </Parrafo>
                     <div className="flex text-left mt-10 relative">
@@ -29,6 +30,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                                 inStock={product.stock ? true : false} >{product.stock ? 'En Stock' : 'Sin Stock'}
                             </StateStock>
                             <Btn
+                                className="z-10"
                                 type="button" 
                                 isGreen={true}
                                 onClick={()=> {setUnits(!units), unitsProduct(product)}}
@@ -37,7 +39,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                             </Btn>
                         </div>
                     </div>
-                </div>
+                </Link>
             </section>
             <a href="#" className="absolute top-0 right-0">
                 <IconStar isOn={false} fill="currentColor" className="bi bi-star-fill" viewBox="0 0 16 16">

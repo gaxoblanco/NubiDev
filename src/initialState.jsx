@@ -6,25 +6,30 @@ export default {
     products: [
       {
         '_id': '1',
-        'nombre': 'Camiseta',
+        'nombre': 'Camiseta blanca lisa, cuello en V',
         "slug": "camiceta-1",
         "codigo": "PR001",
         "precio": 88.50, 
         'imagen': 'https://arepa.s3.amazonaws.com/camiseta.png',
         "stock": 100, 
         "precioOferta": null, 
-        'descripcion': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        'intro': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         "categoria": {
             "nombre": "Categoria general",
             "slug": "categoria-general",
             "icono": "mug"
         },
+        "descripcion": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        "medidas": [
+          {'ancho': 30, 'alto': 20, 'profundidad': 35,}
+        ],
         "caracteristicas": 
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ],
       },
+
       {
         '_id': '2',
-        'nombre': 'Taza',
+        'nombre': 'Taza blanca recta con asa',
         "slug": "taza-1",
         "codigo": "PR001",
         "precio": 14.50, 
@@ -40,9 +45,10 @@ export default {
         "caracteristicas": 
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ]
       },
+
       {
         '_id': '3',
-        'nombre': 'Taza',
+        'nombre': 'Taza negra recta con asa',
         "slug": "pin-1",
         "codigo": "PR001",
         "precio": 100.50, 
@@ -58,9 +64,10 @@ export default {
         "caracteristicas": 
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ]
       },
+
       {
         '_id': '4',
-        'nombre': 'media',
+        'nombre': 'media larga color blanco',
         "slug": "calcoPalzi-1",
         "codigo": "PR001",
         "precio": 142.50, 
@@ -76,9 +83,10 @@ export default {
         "caracteristicas": 
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ]
       },
+
       {
         '_id': '5',
-        'nombre': 'Zapatilla',
+        'nombre': 'Zapatilla blanca para serigrafia en la lengueta',
         "slug": "calcoPalzi-1",
         "codigo": "PR001",
         "precio": 142.50, 
@@ -94,9 +102,10 @@ export default {
         "caracteristicas": 
 	        [ { "nombre": "Volumen", "valor": "100x100cm3" } ]
       },
+
       {
         '_id': '6',
-        'nombre': 'Calcomania',
+        'nombre': 'Calcomania lista para pegar ',
         "slug": "calcoPalzi-1",
         "codigo": "PR001",
         "precio": 142.50, 

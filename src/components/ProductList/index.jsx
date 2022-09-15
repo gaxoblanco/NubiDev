@@ -7,23 +7,19 @@ import './style.css';
 
 export const ProductList = () => {
   const [units, setUnits] = useState(Boolean);
-  const {state } = useContext(AppContext);
+  const {state, itemData, setItemData } = useContext(AppContext);
   const {products} = state;
-  const {searchProducts} = state;
+  // const {searchProducts} = state;
 
-  //convierto el JSON en array
-  // const Arrayproducts = JSON.stringify(products);
-  console.log('filtrande',products.filter(item => item.nombre === 'Taza'));
 
-  const [itemData, setItemData] = useState({})
-
+  //actualiza la cantidad deseada del item -- Bug que al guardas crea un objeto nuevo en lugar de actualizar
   const unitsProduct = (ItemUnits) =>{
     setItemData (ItemUnits);
   }
-  console.log('searchProdcuts desde produclist',products);
+  console.log('productList',itemData);
   
   return (
-      <div>
+      <article>
         <div className="pt-4 grid place-items-center space-y-4 pb-4">
             {products.map(product =>(
                 <ProductCard 
@@ -48,6 +44,6 @@ export const ProductList = () => {
               units = {units}
             /></div> : null}
         </div>
-    </div>
+    </article>
   )
 }

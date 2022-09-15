@@ -6,7 +6,8 @@ import {Home} from '../containers/Home';
 import {Cart} from '../containers/Cart';
 import {Pedido} from '../containers/Pedido';
 import {Confirm} from '../containers/Confirm'
-import {Orders} from '../containers/Orders';;
+import {Orders} from '../containers/Orders';
+import {ProductDetail} from '../containers/ProductDetail';
 import {NotFound} from '../containers/NotFound';
 
 import {Layout} from '../components/Layout';
@@ -29,6 +30,7 @@ export const App = () => {
                   <Route exact path='/pedido' component = {Pedido} />
                   <Route exact path='/carrito/confirmar' component = {Confirm} />
                   <Route exact path='/ordenes' component = {Orders} />
+                  <Route exact path='/detalleproducto' component = {ProductDetail} />
                   <Route component = {NotFound} />
               </Switch>
           </Layout>

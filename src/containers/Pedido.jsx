@@ -6,7 +6,7 @@ import initialState from '../initialState';
 export const Pedido = () => {
   return (
     <>
-      <Form /> // problema a repara, noi son p son input ..... 
+      <Form />
       <CartList 
         cartList={initialState.cartList} 
         off = {true}

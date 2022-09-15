@@ -4,6 +4,7 @@ import initialState from '../initialState'
 export const useInitialState = () => {
     const [state, setState] = useState(initialState)
     // const [search, setSearch] = useState(initialState)
+    const [itemData, setItemData] = useState({})
 
     const addToCart = payload => {    
         setState({
@@ -59,5 +60,7 @@ export const useInitialState = () => {
     edditToCart,
     searchProducts,
     state,
+    itemData,
+    setItemData
   }
 }
