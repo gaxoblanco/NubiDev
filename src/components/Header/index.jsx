@@ -15,7 +15,7 @@ export const Header = ({open, setOpen})=>{
 
             <img 
                 className="logo-header" 
-                src="src\assets\milogo.jpg" 
+                src="https://i.imgur.com/lRZqdqd.jpg" 
                 alt="logo" />
 
             <button
