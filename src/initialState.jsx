@@ -19,7 +19,7 @@ export default {
             "slug": "categoria-general",
             "icono": "mug"
         },
-        "descripcion": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+        "descripcion": 'una hermosa descripcion Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         "medidas": [
           {'ancho': 30, 'alto': 20, 'profundidad': 35,}
         ],

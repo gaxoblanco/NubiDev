@@ -17,7 +17,7 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                 className="absolute h-full w-10/12"
                 to='/detalleproducto' >
             </Link>
-            <section className=" flex bg-slate-100 rounded-lg">
+            <section className=" flex rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-r-lg"
                     isOff={product.precioOferta ? false : true}

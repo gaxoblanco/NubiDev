@@ -5,7 +5,14 @@ import {Parrafo} from '../components/css/styles';
 
 
 export const ProductDetailPaged = () => {
-    const {state, itemData} = useContext(AppContext)
+    const {state, itemData} = useContext(AppContext);
+    const [info, setInfo] = useState(
+      {        
+        name: 'Descripcion',
+        data: itemData.descripcion,
+        isOn: true
+      })
+    
     
     const options = [
       {
@@ -25,45 +32,76 @@ export const ProductDetailPaged = () => {
       }
     ];
 
-    let dataPrint = options.filter(item => item.isOn)
+
     
 
 
     const handleClickActive = (e) =>{
+      console.log('0', e);
       //paso cada options[x].isOn a false para que no sea visible 
       options.map(item => item.isOn = false);
-      
-      //activo el elemento deseado deseado
-      options[e].isOn = true;
-      useEffect
-    }
 
-    useEffect(()=>{
-      dataPrint
-      console.log(dataPrint);
-    }, [])
+      //busco la posicion del item que coincida con e y la paso a true.
+      options[options.findIndex(item=> item.name == e)].isOn = true
+
+      //setInfo siempre va a ser el objeto que sea True en el array options
+      setInfo (options.find(item => item.isOn));
+      
+    }
+console.log(info.data);
+    
   return (
     <div>
         <div className="grid grid-cols-3">
-            <button 
-              onClick={()=>handleClickActive(0)} 
+          {options.map(item =>(
+            <button
+              key={item.name}
+              onClick={()=>handleClickActive(item.name)}
               className={` 
-              ${options[0].isOn 
+              ${options.isOn 
                 ? 'bg-gray-100 productDetail-buttonMoreData' 
                 : "bg-none productDetail-buttonMoreData"}`}
-            >Descripcion</button>
-            <button 
-              onClick={()=>handleClickActive(1)} 
-              className="productDetail-buttonMoreData"
-            >Medidas</button>
-            <button 
-              onClick={()=>handleClickActive(2)} 
-              className="productDetail-buttonMoreData"
-            >Caracteristicas</button>
+            >
+              <Parrafo>{item.name}</Parrafo>
+            </button>
+          ))}
+
         </div>
         <Parrafo positionLeft={true} className="bg-gray-100 p-4 rounded-b-lg">
-              {options.find(item => item.isOn).data}
+              {info.name == 'Descripcion' 
+                ? info.data : (info.name == 'Medidas' 
+                ? <Medidas info={info} /> : <Caracteristicas info={info}/>)
+              }
         </Parrafo>
+    </div>
+  )
+}
+
+
+export const Medidas = ({info}) => {
+  return (
+    <div className="grid grid-cols-2">
+    <Parrafo>Ancho</Parrafo>
+    <Parrafo>{info.data[0].ancho}</Parrafo>
+
+    <Parrafo>Alto</Parrafo>
+    <Parrafo>{info.data[0].alto}</Parrafo>
+
+    <Parrafo>Profundidad</Parrafo>
+    <Parrafo>{info.data[0].profundidad}</Parrafo>
+    </div>
+  )
+}
+
+export const Caracteristicas = ({info}) => {
+  console.log(info.data);
+  return (
+    <div className="grid grid-cols-2">
+    <Parrafo>Volumen</Parrafo>
+    <Parrafo>{info.data[0].nombre}</Parrafo>
+
+    <Parrafo>valor</Parrafo>
+    <Parrafo>{info.data[0].valor}</Parrafo>
     </div>
   )
 }
