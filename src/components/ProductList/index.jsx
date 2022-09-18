@@ -36,7 +36,6 @@ export const ProductList = () => {
           {units ? 
             <div 
               event
-              // onClick={()=>{setUnits(!units)}}
               className="fixed top-0 w-full h-full bg-transparent grid place-items-center " >
             <AddCart 
               itemData = {itemData}
