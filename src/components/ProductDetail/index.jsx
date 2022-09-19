@@ -26,8 +26,9 @@ export const ProdcutDetail = () => {
                   isBold={true}
                 >{itemData.precio}</Price>
             </div>
-            <div className="productDetail-Section">
+            <div className="productDetail-Section mb-4">
                 <Parrafo
+                  marginR={true}
                   positionLeft={true}
                 >{itemData.intro}</Parrafo>
                 <StateStock

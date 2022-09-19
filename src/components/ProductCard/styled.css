@@ -1,6 +1,8 @@
 
 .img-productCard{
-    width:150px;
+    max-width:150px;
+    max-height: auto;
+    object-fit: cover;
     margin-right: 10px;
 }
 /* .state-product{

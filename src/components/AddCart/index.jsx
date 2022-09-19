@@ -40,17 +40,17 @@ export const AddCart = ({units, setUnits, itemData})=>{
     
     return(
         <span>
-        <div className="bg-slate-100 relative mx-12 rounded-lg">
+        <div className="bg-white relative mx-12 rounded-xl">
             <div className="container-addCart--img relative">
                 <img 
                     className="img-productCardSmall mt-6" 
-                    src="https://sublitextil.com.ar/wp-content/uploads/2019/01/gorra-1.png" />
+                    src={itemData.imagen} />
                 <Parrafo 
                     className="mt-6"
                     is16={true} 
                     positionLeft={true} 
                 >
-                    {itemData.descripcion ? itemData.descripcion : itemData.itemData.descripcion} 
+                    {itemData.descripcion ? itemData.nombre : itemData.itemData.nombre} 
                 </Parrafo>
                 <button 
                     className="absolute top-0  right-0 z-10"

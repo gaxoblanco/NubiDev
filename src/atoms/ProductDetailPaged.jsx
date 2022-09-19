@@ -51,7 +51,7 @@ export const ProductDetailPaged = () => {
 console.log(info.data);
     
   return (
-    <div>
+    <div className='min-h-[15rem]'>
         <div className="grid grid-cols-3">
           {options.map(item =>(
             <button
@@ -67,7 +67,7 @@ console.log(info.data);
           ))}
 
         </div>
-        <Parrafo positionLeft={true} className="bg-gray-100 p-4 rounded-b-lg">
+        <Parrafo positionLeft={true} className="bg-gray-100 p-4 rounded-b-lg min-h-[10rem]">
               {info.name == 'Descripcion' 
                 ? info.data : (info.name == 'Medidas' 
                 ? <Medidas info={info} /> : <Caracteristicas info={info}/>)

@@ -13,8 +13,8 @@ export const OrdersCard = ({product, paid, submit}) => {
 
     console.log(product);
   return (
-    <section className="bg-slate-200 mt-4 mb-4 grid place-items-center">
-        <div className="OrdersCard bg-slate-200 p-4 w-11/12">
+    <section className=" mt-4 mb-4 grid place-items-center">
+        <div className="OrdersCard p-4 w-11/12">
             <button 
                 type="button"
                 onClick={()=> close(!open)}

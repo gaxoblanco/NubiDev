@@ -42,15 +42,15 @@ export const useInitialState = () => {
         });
     };
 
+    //Me llega el Array de  prodyctos que cumplieron con la busqueda y lo almaceno
+    //ProductsList tiene que consultar si searchPro esta vacio o tiene alguna busqueda.
     const searchProducts = payload=>{
-        console.log('hooks0', state.searchProducts);
         setState({
             ...state,
-            searchProducts: [...state.searchProducts, payload]
+            searchPro: [...state.searchPro, payload]
         })
-        console.log('hooks', state.searchProducts);
+        
       }
-
 
 
   return {

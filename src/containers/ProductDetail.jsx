@@ -16,21 +16,21 @@ export const ProductDetail = () => {
   return (
     <article className="grid place-items-center">
         <div className="max-w-6xl  grid place-items-center">
-            <div className="relative grid place-items-center">
+            <div className="relative w-11/12">
                 <OnOff 
-                    className="bg-cuarto absolute px-4 rounded-r-lg mt-4 "
+                    className="bg-cuarto absolute px-4 rounded-lg mt-4 "
                     isOff={itemData.precioOferta ? false : true}
                     >
                     <p className="decoration-slate-200 text-base">{itemData.precioOferta} % Off</p>
                 </OnOff>
                 <Btn 
                     onClick={()=> {setUnits(!units)}}
-                    className="absolute right-4 bottom-4"
+                    className="absolute -right-0 bottom-0"
                     is22={true}
                     isGreen={true}>
                     Agregar
                 </Btn>
-                    <img className="w-11/12" src={itemData.imagen} />
+                    <img className="w-100%" src={itemData.imagen} />
             </div>
 
             <ProdcutDetail/>

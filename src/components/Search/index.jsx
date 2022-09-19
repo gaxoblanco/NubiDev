@@ -3,7 +3,7 @@ import {Btn} from '../css/Button'
 import {Icon} from '../css/styles'
 
 export const Search = ({open, setOpen, searchValue, setSearchValue, handleSearch})=>{
-    
+    //Paso searchValue para recordar la ultima busqueda realizada
     const onSearchValueChange = (event)=>{
         console.log('desde el Search',event.target.value);
          setSearchValue(event.target.value);
@@ -30,7 +30,7 @@ export const Search = ({open, setOpen, searchValue, setSearchValue, handleSearch
             </div>
 
             <Btn 
-                onClick={()=> handleSearch()}
+                onClick={()=> handleSearch(searchValue)}
                 isBig={true} 
                 isGreen={true} 
                 is22={true} >

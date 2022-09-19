@@ -9,19 +9,25 @@ export const Layout = ({children}) => {
   const {products} = state;
 
 
-  const [searchValue, setSearchValue] = useState()
+  const [searchValue, setSearchValue] = useState('')
   const [open, setOpen] = useState(false)
 
 
-  const filte = products.filter(item => item.nombre == searchValue)
+ 
+//lista filtra los productos segun si incluyen la palabra ingresada en la busqueda
+const handleSearch = (searchValue) =>{
+  const busqueda =  searchValue.toLowerCase();
+  
+ //flata pasar item.nombre por toLowerCase() 
+  const lista = products.filter(item => item.nombre.includes(busqueda))
+ 
+  state.searchPro = [];
+  searchProducts(lista)
 
-const handleSearch = () =>{
-  let listProducts = filte
-  searchProducts(listProducts)
-  console.log('layout',listProducts);
+  setOpen(false)
 }
 
-
+console.log(state);
 
   return (
     <div className={searchValue? `overflow:hidden` : ``}>
