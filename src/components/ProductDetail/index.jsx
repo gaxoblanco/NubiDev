@@ -12,7 +12,7 @@ export const ProdcutDetail = () => {
     <div className="productDetail w-11/12">
             <div className="productDetail-Section">
                 <Parrafo
-                  is16={true}
+                  is20={true}
                   isBold={true}
                   positionLeft={true}
                 >{itemData.name}</Parrafo>
@@ -36,7 +36,7 @@ export const ProdcutDetail = () => {
                   inStock={itemData.stock ? true : false} 
                 >Stock</StateStock>
                 <Parrafo
-                  is16={true}
+                  is20={true}
                   isBold={true}
                   isGray={true}
                 >{itemData.stock}</Parrafo>

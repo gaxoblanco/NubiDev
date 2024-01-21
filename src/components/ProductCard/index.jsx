@@ -11,13 +11,13 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
 
 
     return (
-        <div className="prodcutCard relative duration-500 ease-in-out hover:scale-105">
+        <div className="prodcut-card relative duration-500 ease-in-out hover:scale-105">
             <Link 
                 onClick={()=> unitsProduct(product)} 
                 className="absolute h-full w-10/12"
                 to='/detalleproducto' >
             </Link>
-            <section className="max-w-[34rem] flex rounded-lg">
+            <section className="product-card-container flex rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-lg"
                     isOff={product.discoutOffert ? false : true}
@@ -25,10 +25,10 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                     <p className="decoration-slate-200 text-base">{product.discoutOffert} % Off</p>
                 </OnOff>
                 <img className="img-productCard rounded-lg" src={product.img.url1} alt={product.img.alt}/>
-                <div className="min-w-[18rem] flex flex-col justify-around">
+                <div className="size-full flex flex-col justify-around">
                     <Parrafo 
                         marginR={true}
-                        is16={true} 
+                        is20={true} 
                         positionLeft={true}>{product.name}
                         
                     </Parrafo>

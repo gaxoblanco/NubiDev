@@ -31,7 +31,7 @@ export const OrderDetail = ({product, name, email}) => {
         </Parrafo>
         <Parrafo
           isBold={true} 
-          is16={true}>
+          is20={true}>
             {name}
         </Parrafo>
       </div>
@@ -45,7 +45,7 @@ export const OrderDetail = ({product, name, email}) => {
         </Parrafo>
         <Parrafo
           isBold={true} 
-          is16={true}>
+          is20={true}>
             {email}
         </Parrafo>
       </div>
@@ -66,7 +66,7 @@ export const OrderDetail = ({product, name, email}) => {
             Modificar Orden
           </Btn>
         <div></div>
-        <Price className="flex" is16={true} isBold={true}>
+        <Price className="flex" is20={true} isBold={true}>
           <Parrafo 
             className="mt-8 flex-auto text-right"  
             marginR={true}

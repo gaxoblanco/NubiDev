@@ -49,7 +49,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
                     />
                 <Parrafo 
                     className="mt-6"
-                    is16={true} 
+                    is20={true} 
                     positionLeft={true} 
                 >
                     {itemData.description ? itemData.nombre : itemData.itemData.nombre} 

@@ -8,7 +8,7 @@ const terciario = '#FFB800';
 const gray = '#807F7F';
 
 export const Parrafo = styled.p `
-    font-size:${({is16})=> is16 ? '1.6rem' : '1.2rem'};
+    font-size:${({is20})=> is20 ? '2rem' : '1.2rem'};
     font-weight: ${({isBold})=> isBold ? 'bold' : 'normal'};
     color: ${({isGray})=> isGray ? 'gray' : '#020202'};
     margin-right:${({marginR})=> marginR ? '4px' : '0px'};
@@ -19,6 +19,9 @@ export const Parrafo = styled.p `
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 4;
+
+    line-height: 1.2;
+    margin-bottom: 1rem;
 `;
 
 export const Price = styled.p `

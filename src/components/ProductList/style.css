@@ -1,8 +1,6 @@
-/* .productList2:last-child{
-  margin-bottom:50px;
-  background: red;
-} */
-
+.product-list {
+  max-width: 800px;
+}
 .show-element {
     /* duracion*/
     animation-duration: 2s;

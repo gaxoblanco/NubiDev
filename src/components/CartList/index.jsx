@@ -60,7 +60,7 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
           <Parrafo 
             className="w-1/3 text-left mt-2"
             isBold= {true}
-            is16={true}>
+            is20={true}>
             Total de la Orden
           </Parrafo>
 
@@ -68,14 +68,14 @@ export const CartList = ({Off, precioTotal, unitTotal}) => {
             <div className="flex ml-4">
               <Price isBold= {true}>{handleSumUnits()}</Price>
               <Parrafo 
-                is16={true}
+                is20={true}
                 className="mt-6 pl-2">
                 Unidades
               </Parrafo>
             </div>
             <div className="grid grid-cols-2 mr-4">
               <Parrafo 
-                is16={true}
+                is20={true}
                 className="mt-6 ">
                 Total:
               </Parrafo>

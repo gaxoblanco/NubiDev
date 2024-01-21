@@ -20,7 +20,7 @@ export const ProductList = () => {
   
   return (
       <article>
-        <div className="pt-4 grid place-items-center space-y-4 pb-4 mb-28">
+        <div className="product-list pt-4 grid pb-4 m-20 mb-28">
               {(searchPro.length < 0? searchPro : products).map(product =>(
                   <ProductCard 
                     key={product._id} 

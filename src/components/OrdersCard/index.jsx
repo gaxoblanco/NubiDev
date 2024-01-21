@@ -33,7 +33,7 @@ export const OrdersCard = ({product, paid, submit}) => {
                         </Icon>
                         <Parrafo 
                             marginL={true} 
-                            is16={true} 
+                            is20={true} 
                             isBold={true}>
                                 Pagado
                         </Parrafo>
@@ -55,7 +55,7 @@ export const OrdersCard = ({product, paid, submit}) => {
                 </div>
                 <Parrafo 
                     marginL={true} 
-                    is16={true} 
+                    is20={true} 
                     isBold={true} 
                     isGray={submit ? false : true}>
                         Retirado
