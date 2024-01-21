@@ -7,5 +7,5 @@ export const Btn = styled.button `
     border-radius: 6px;
     font-weight: 600;
     color: white;
-    font-size: ${({is22})=> is22 ? '22px' : '16px'};
+    font-size: ${({is22})=> is22 ? '12px' : '16px'};
 `;

@@ -21,7 +21,7 @@ export const ProductDetail = () => {
                     className="bg-cuarto absolute px-4 rounded-lg mt-4 "
                     isOff={itemData.discoutOffert ? false : true}
                     >
-                    <p className="decoration-slate-200 text-base">{itemData.discoutOffert} % Off</p>
+                    <p className="decoration-slate-200">{itemData.discoutOffert} % Off</p>
                 </OnOff>
                 <Btn 
                     onClick={()=> {setUnits(!units)}}

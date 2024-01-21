@@ -1,14 +1,15 @@
 
 .prodcut-card{
-    padding: 16px 0;
+    padding: 1.2rem 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.322);
 }
-.img-productCard{
+
+.product-card--img {
     width:150px;
     max-height: auto;
     object-fit: cover;
     margin-right: 10px;
-    font-size: 12px;
+    font-size: 1rem;
     text-align: center;
 }
 .product-card-container {
@@ -20,6 +21,7 @@
 }
 .size-full {
     width: 100%;
+    min-height: 8rem;
 }
 .btn-agregar{
     background: #4ADE04;

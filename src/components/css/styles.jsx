@@ -8,7 +8,7 @@ const terciario = '#FFB800';
 const gray = '#807F7F';
 
 export const Parrafo = styled.p `
-    font-size:${({is20})=> is20 ? '2rem' : '1.2rem'};
+    font-size:${({is20})=> is20 ? '1rem' : '0.8rem'};
     font-weight: ${({isBold})=> isBold ? 'bold' : 'normal'};
     color: ${({isGray})=> isGray ? 'gray' : '#020202'};
     margin-right:${({marginR})=> marginR ? '4px' : '0px'};
@@ -25,7 +25,7 @@ export const Parrafo = styled.p `
 `;
 
 export const Price = styled.p `
-    font-size:${({is40})=> is40 ? '4rem' : '3rem'};
+    font-size:${({is40})=> is40 ? '2rem' : '1.5rem'};
     font-weight: ${({isBold})=> isBold ? 'bold' : 'normal'};
     color: '#020202';
 `;
@@ -59,7 +59,7 @@ export const IconStar = styled.svg`
 `
 
 export const StateStock = styled.p`
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: ${({inStock})=> inStock ? '#A0A0A0' : secundario};
     margin-bottom: 0.4rem;
     font-weight: bold;

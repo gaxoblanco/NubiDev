@@ -22,10 +22,10 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                     className="bg-cuarto absolute px-4 rounded-lg"
                     isOff={product.discoutOffert ? false : true}
                 >
-                    <p className="decoration-slate-200 text-base">{product.discoutOffert} % Off</p>
+                    <p className="decoration-slate-200">{product.discoutOffert} % Off</p>
                 </OnOff>
-                <img className="img-productCard rounded-lg" src={product.img.url1} alt={product.img.alt}/>
-                <div className="size-full flex flex-col justify-around">
+                <img className="product-card--img rounded-lg" src={product.img.url1} alt={product.img.alt}/>
+                <div className="size-full min-h-28 flex flex-col justify-around">
                     <Parrafo 
                         marginR={true}
                         is20={true} 
@@ -50,8 +50,8 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
                     </div>
                 </div>
             </section>
-            <a href="#" className="absolute top-8 right-0">
-                <IconStar isOn={false} fill="currentColor" className="bi bi-star-fill" viewBox="0 0 16 16">
+            <a href="#" className="absolute top-0 right-0">
+                <IconStar isOn={false} fill="currentColor" className="bi bi-star-fill" viewBox="0 0 18 18">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
                 </IconStar>
             </a>
