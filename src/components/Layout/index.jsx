@@ -18,8 +18,8 @@ export const Layout = ({children}) => {
 const handleSearch = (searchValue) =>{
   const busqueda =  searchValue.toLowerCase();
   
- //flata pasar item.nombre por toLowerCase() 
-  const lista = products.filter(item => item.nombre.includes(busqueda))
+ //flata pasar item.name por toLowerCase() 
+  const lista = products.filter(item => item.name.includes(busqueda))
  
   state.searchPro = [];
   searchProducts(lista)

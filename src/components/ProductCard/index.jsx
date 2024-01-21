@@ -20,19 +20,19 @@ export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
             <section className="max-w-[34rem] flex rounded-lg">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-lg"
-                    isOff={product.precioOferta ? false : true}
+                    isOff={product.discoutOffert ? false : true}
                 >
-                    <p className="decoration-slate-200 text-base">{product.precioOferta} % Off</p>
+                    <p className="decoration-slate-200 text-base">{product.discoutOffert} % Off</p>
                 </OnOff>
-                <img className="img-productCard" src={product.imagen} />
+                <img className="img-productCard" src={product.img.url1} />
                 <div className="min-w-[18rem]">
                     <Parrafo 
                         marginR={true}
                         is16={true} 
-                        positionLeft={true}>{product.nombre}
+                        positionLeft={true}>{product.name}
                     </Parrafo>
                     <div className="flex text-left mt-10 relative">
-                        <Price>${product.precio}</Price>
+                        <Price>${product.price}</Price>
                         <div className="absolute right-1 bottom-1">
                             <StateStock className="ml-8"
                                 inStock={product.stock ? true : false} >{product.stock ? 'En Stock' : 'Sin Stock'}

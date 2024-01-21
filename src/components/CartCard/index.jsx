@@ -11,9 +11,9 @@ export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
 
     return (
         <section className="container-cartCard w-full bg-white relative rounded-lg">
-            <img className='img-cartCard' src={product.itemData.imagen} />
+            <img className='img-cartCard' src={product.itemData.img[0]} />
             <div className="cartCard-description">
-                <Parrafo is16={true} positionLeft={true}>{product.itemData.codigo}</Parrafo>
+                <Parrafo is16={true} positionLeft={true}>{product.itemData.productCode}</Parrafo>
             </div>
             <OnOff isOff={off}>
                 <button 

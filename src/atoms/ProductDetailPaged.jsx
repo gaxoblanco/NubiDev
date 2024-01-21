@@ -9,7 +9,7 @@ export const ProductDetailPaged = () => {
     const [info, setInfo] = useState(
       {        
         name: 'Descripcion',
-        data: itemData.descripcion,
+        data: itemData.description,
         isOn: true
       })
     
@@ -17,17 +17,17 @@ export const ProductDetailPaged = () => {
     const options = [
       {
         name: 'Descripcion',
-        data: itemData.descripcion,
+        data: itemData.description,
         isOn: true
       },
       {
         name: 'Medidas',
-        data: itemData.medidas,
+        data: itemData.measures,
         isOn: false
       },
       {
         name: 'Caracteristicas',
-        data: itemData.caracteristicas,
+        data: itemData.characteristic,
         isOn: false
       }
     ];
@@ -98,7 +98,7 @@ export const Caracteristicas = ({info}) => {
   return (
     <div className="grid grid-cols-2">
     <Parrafo>Volumen</Parrafo>
-    <Parrafo>{info.data[0].nombre}</Parrafo>
+    <Parrafo>{info.data[0].name}</Parrafo>
 
     <Parrafo>valor</Parrafo>
     <Parrafo>{info.data[0].valor}</Parrafo>

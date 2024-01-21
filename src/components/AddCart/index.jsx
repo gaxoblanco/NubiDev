@@ -9,7 +9,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
     
     //unidades y precio total segun unidades
     const [unit, setUnit] = useState(1);
-    const total = ((itemData.precio ? itemData.precio : itemData.itemData.precio) * unit);
+    const total = ((itemData.price ? itemData.price : itemData.itemData.price) * unit);
 
     const item = {
         _id: itemData._id,
@@ -44,13 +44,13 @@ export const AddCart = ({units, setUnits, itemData})=>{
             <div className="container-addCart--img relative">
                 <img 
                     className="img-productCardSmall mt-6" 
-                    src={itemData.imagen} />
+                    src={itemData.img[0]} />
                 <Parrafo 
                     className="mt-6"
                     is16={true} 
                     positionLeft={true} 
                 >
-                    {itemData.descripcion ? itemData.nombre : itemData.itemData.nombre} 
+                    {itemData.description ? itemData.nombre : itemData.itemData.nombre} 
                 </Parrafo>
                 <button 
                     className="absolute top-0  right-0 z-10"

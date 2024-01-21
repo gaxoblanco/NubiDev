@@ -7,8 +7,8 @@ export const ProductSuggested = ({product}) => {
   const {itemData, setItemData } = useContext(AppContext);
   return (
     <Link to="/detalleproducto" onClick={()=>setItemData(product)} className="w-40">
-        <img className="w-40" src={product.imagen} />
-        <Parrafo>{product.nombre}</Parrafo>
+        <img className="w-40" src={product.img.url1} />
+        <Parrafo>{product.name}</Parrafo>
     </Link>
   )
 }

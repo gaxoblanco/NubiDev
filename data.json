@@ -1,0 +1,172 @@
+{
+  "products": [
+    {
+      "_id": "1",
+      "name": "Gorra",
+      "slug": "gorra-1",
+      "productCode": "PR001",
+      "price": 88.5,
+      "stock": 100,
+      "discoutOffert": null,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Gorra"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "2",
+      "name": "Gorra",
+      "slug": "gorra-2",
+      "productCode": "PR002",
+      "price": 88.5,
+      "stock": 0,
+      "discoutOffert": null,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Gorra"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "3",
+      "name": "Gorra",
+      "slug": "gorra-3",
+      "productCode": "PR003",
+      "price": 88.5,
+      "stock": 100,
+      "discoutOffert": null,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Gorra"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "4",
+      "name": "Taza alta con asa",
+      "slug": "taza-alta-con-asa",
+      "productCode": "PR004",
+      "price": 88.5,
+      "stock": 0,
+      "discoutOffert": 80,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Taza alta con asa"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "5",
+      "name": "Taza alta con asa",
+      "slug": "taza-alta-con-asa",
+      "productCode": "PR005",
+      "price": 88.5,
+      "stock": 100,
+      "discoutOffert": null,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Taza alta con asa"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "6",
+      "name": "Taza alta con asa",
+      "slug": "taza-alta-con-asa",
+      "productCode": "PR006",
+      "price": 88.5,
+      "stock": 100,
+      "discoutOffert": 10,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Taza alta con asa"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    },
+    {
+      "_id": "7",
+      "name": "Taza alta con asa",
+      "slug": "taza-alta-con-asa",
+      "productCode": "PR007",
+      "price": 88.5,
+      "stock": 100,
+      "discoutOffert": null,
+      "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "img": {
+        "url1": "https://picsum.photos/200",
+        "url2": "https://picsum.photos/200",
+        "url3": "https://picsum.photos/200",
+        "alt": "Taza alta con asa"
+      },
+      "category": {
+        "name": "Categoria general",
+        "slug": "categoria-general",
+        "icono": "mug"
+      },
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
+      "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+    }
+  ]
+}

@@ -41,7 +41,7 @@ export const Form = ({children})=>{
                 isBold={true} 
                 isGray={true}
                 className="ml-8">
-                Nombre
+                name
             </Parrafo>
             <input 
                 type="text"

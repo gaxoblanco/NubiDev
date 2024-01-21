@@ -19,9 +19,9 @@ export const ProductDetail = () => {
             <div className="relative w-11/12">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-lg mt-4 "
-                    isOff={itemData.precioOferta ? false : true}
+                    isOff={itemData.discoutOffert ? false : true}
                     >
-                    <p className="decoration-slate-200 text-base">{itemData.precioOferta} % Off</p>
+                    <p className="decoration-slate-200 text-base">{itemData.discoutOffert} % Off</p>
                 </OnOff>
                 <Btn 
                     onClick={()=> {setUnits(!units)}}
@@ -30,7 +30,7 @@ export const ProductDetail = () => {
                     isGreen={true}>
                     Agregar
                 </Btn>
-                    <img className="w-100%" src={itemData.imagen} />
+                    <img className="w-100%" src={itemData.img[0]} />
             </div>
 
             <ProdcutDetail/>
