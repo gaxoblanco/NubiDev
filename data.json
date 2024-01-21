@@ -13,7 +13,7 @@
         "url1": "https://picsum.photos/200",
         "url2": "https://picsum.photos/200",
         "url3": "https://picsum.photos/200",
-        "alt": "Gorra"
+        "alt": "Gorra marron"
       },
       "category": {
         "name": "Categoria general",
@@ -26,7 +26,7 @@
     },
     {
       "_id": "2",
-      "name": "Gorra",
+      "name": "Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc",
       "slug": "gorra-2",
       "productCode": "PR002",
       "price": 88.5,
@@ -34,10 +34,10 @@
       "discoutOffert": null,
       "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "img": {
-        "url1": "https://picsum.photos/200",
+        "url1": "https://asdasd",
         "url2": "https://picsum.photos/200",
         "url3": "https://picsum.photos/200",
-        "alt": "Gorra"
+        "alt": "Gorra marron"
       },
       "category": {
         "name": "Categoria general",
@@ -50,7 +50,7 @@
     },
     {
       "_id": "3",
-      "name": "Gorra",
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "slug": "gorra-3",
       "productCode": "PR003",
       "price": 88.5,
@@ -61,7 +61,7 @@
         "url1": "https://picsum.photos/200",
         "url2": "https://picsum.photos/200",
         "url3": "https://picsum.photos/200",
-        "alt": "Gorra"
+        "alt": "Gorra marron"
       },
       "category": {
         "name": "Categoria general",

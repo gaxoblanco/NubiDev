@@ -14,6 +14,11 @@ export const Parrafo = styled.p `
     margin-right:${({marginR})=> marginR ? '4px' : '0px'};
     margin-left: ${({marginL})=> marginL ? '4px' : '0px'};
     text-align: ${({positionLeft})=> positionLeft ? 'left' : 'center'};
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
 `;
 
 export const Price = styled.p `

@@ -44,7 +44,9 @@ export const AddCart = ({units, setUnits, itemData})=>{
             <div className="container-addCart--img relative">
                 <img 
                     className="img-productCardSmall mt-6" 
-                    src={itemData.img[0]} />
+                    src={itemData.img.url1} 
+                    alt={itemData.img.alt}
+                    />
                 <Parrafo 
                     className="mt-6"
                     is16={true} 
