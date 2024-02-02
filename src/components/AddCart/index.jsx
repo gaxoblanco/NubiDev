@@ -40,10 +40,10 @@ export const AddCart = ({units, setUnits, itemData})=>{
     
     return(
         <span>
-        <div className="bg-white relative mx-12 rounded-xl">
+        <div className="bg-white relative mx-12 rounded-xl container-addCart p-4">
             <div className="container-addCart--img relative">
                 <img 
-                    className="img-productCardSmall mt-6" 
+                    className="img-productCardSmall mb-4 mr-4" 
                     src={itemData.img.url1} 
                     alt={itemData.img.alt}
                     />
@@ -52,7 +52,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
                     is20={true} 
                     positionLeft={true} 
                 >
-                    {itemData.description ? itemData.nombre : itemData.itemData.nombre} 
+                    {itemData.description ? itemData.description : itemData.nombre} 
                 </Parrafo>
                 <button 
                     className="absolute top-0  right-0 z-10"
@@ -73,21 +73,21 @@ export const AddCart = ({units, setUnits, itemData})=>{
                 <Price >${item.totalPrice}</Price>
             </div>
             <Btn 
-                isBig={true} 
+                wSize={'300'} 
                 isGreen={true} 
                 is22={true}
                 type="button"
                 onClick={handleAddToCart(item)}
                 >Agregar al Carrito
             </Btn>
-            <Btn 
-                isBig={true} 
-                isGreen={true} 
+            {/* <Btn 
+                // wSize={100} 
+                isGreen={false} 
                 is22={true}
                 type="button"
                 onClick={handleEdditToProduct(item)}
                 >Editar carrito
-            </Btn>
+            </Btn> */}
         </div>
         </span>
     )

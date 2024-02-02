@@ -31,7 +31,7 @@ export const Search = ({open, setOpen, searchValue, setSearchValue, handleSearch
 
             <Btn 
                 onClick={()=> handleSearch(searchValue)}
-                isBig={true} 
+                wSize={true} 
                 isGreen={true} 
                 is22={true} >
                     Buscar Producto

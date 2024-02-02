@@ -26,7 +26,7 @@ export const OrdersList = () => {
       <Link to="/">
         <Btn 
           isGreen={true}
-          isBig={true}
+          wSize={"100"}
           is22={true}
         >
           Seguir Comprando

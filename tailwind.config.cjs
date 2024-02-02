@@ -17,6 +17,9 @@ module.exports = {
         'cuarto': '#FF9D0B',
         'transparent': 'rgba(167, 167, 167, 0.67)',
       }),
+      width: {
+        '128': '32rem',
+      },
       textColor:{
         'blanco': '#F6F6F6',
         'negro': '#0A0909',
@@ -28,10 +31,13 @@ module.exports = {
         montserrat:['Montserrat', 'sans-serif']
       },
       fontSize: {
-        sm: ['1.2rem', '20rem'],
-        base: ['1.6rem', '2.4rem'],
-        lg: ['2rem', '2.8rem'],
-        xl: ['4rem', '4.6rem'],
+        sm: '0.8rem',
+        base: '1rem',
+        xl: '1.25rem',
+        '2xl': '1.563rem',
+        '3xl': '1.953rem',
+        '4xl': '2.441rem',
+        '5xl': '3.052rem',
       }
     },
   },

@@ -22,3 +22,7 @@
   h1{
     font-size: 1.2rem;
   }
+  .page-list-products {
+    display: flex;
+    justify-content: space-around;
+  }

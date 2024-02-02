@@ -20,6 +20,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["blanco", "gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -44,6 +45,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["blanco", "gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -68,6 +70,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["blanco", "gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -92,6 +95,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["blanco"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -116,6 +120,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -140,6 +145,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["blanco", "gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
@@ -164,6 +170,7 @@
         "slug": "categoria-general",
         "icono": "mug"
       },
+      "tag": ["negro"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]

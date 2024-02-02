@@ -35,7 +35,7 @@ export const ProductDetail = () => {
 
             <ProdcutDetail/>
 
-            <div className="flex overflow-x-scroll w-11/12 mt-4">
+            <div className="grid gap-2 overflow-x-scroll w-11/12 mt-4">
                 <div className="flex">
                     {products.map(product =>(
                     <ProductSuggested 
@@ -51,7 +51,7 @@ export const ProductDetail = () => {
           {units ? 
             <div 
               event
-              className="fixed top-0 left-0 w-full h-full bg-transparent grid place-items-center " >
+              className=" top-0 left-0 w-full h-full bg-transparent grid place-items-center" >
             <AddCart 
               itemData = {itemData}
               setUnits = {setUnits}

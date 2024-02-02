@@ -20,7 +20,7 @@ export const Cart = () => {
       <Link to={'/carrito/confirmar'}>
         <Btn 
           type="button"
-          isBig = {true}
+          wSize = {true}
           is22 = {true}
           isGreen = {true}
         >
@@ -30,7 +30,7 @@ export const Cart = () => {
       <Link to={'/'}>
         <Btn 
           type="button"
-          isBig = {true}
+          wSize = {true}
           is22 = {true}
         >
         Seguir Comprando

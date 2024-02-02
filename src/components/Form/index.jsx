@@ -74,7 +74,7 @@ export const Form = ({children})=>{
             <Btn
                 type="button"
                 className="mt-4 mb-4"
-                isBig= {true}
+                size= {100}
                 isGreen= {true}
                 is22= {true}
                 onClick={handleSubmit}
