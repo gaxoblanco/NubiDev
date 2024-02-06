@@ -43,11 +43,36 @@ export const ProductList = () => {
   const handleToggle3 = () => {
     setIsActive3(!isActive3);
   };
+
+  // const randomNum = Math.floor(Math.random() * 100) + 1;
+  // const result = 100 / randomNum;
+  // const remainder = 100 % randomNum;
+  // funcion para generar el tamaño de la imagen dividiendo en 2 partes el 100%
+  let imgSize = 260;
+  let boolean = false;
+
+  let img2 = 0;
+  const imageSize = (index) => {
+    if(boolean){
+      imgSize = (index % 2) === 0 ? 340 : 260;
+      boolean = (index % 2) === 0 ? true : false;
+
+      // return imgSize;
+    }
+    else {
+      imgSize = (index % 2) === 0 ? 260 : 340;
+      boolean = (index % 2) === 0 ? false : true;
+
+      // return imgSize;
+    }
+
+  }
+
   
   return (
       <article className='page-list-products mx-8'>
           {/* filtro de productos */}
-          <section className="w-60">
+          <section className="w-60 peach-fuzz--300">
             <h2 className="mb-4">Filtrar productos</h2>
             <form className="search-form mb-4 relative text-base">
               <input type="text" placeholder="Buscar productos" />
@@ -77,17 +102,25 @@ export const ProductList = () => {
           </section> */}
 
           {/* listado de productos */}
-          <section className="product-list pt-4 grid pb-4 mb-28">
-                {(searchPro.length < 0? searchPro : products).map(product =>(
-                    <ProductCard 
-                      key={product._id} 
-                      product={product} 
-                      units={units}
-                      setUnits = {setUnits}
-                      unitsProduct = {unitsProduct}
-                    />
-                ))}
-          </section>
+          <section className="product-list pt-4 mb-28 flex flex-wrap justify-center pb-4">
+          {(searchPro.length < 0 ? searchPro : products).map((product, index) => {
+
+            {/* const value = (index % 2) === 0 ? 260 : 340; */}
+            imageSize(index);
+            return (
+              <>
+              <ProductCard 
+                key={product._id} 
+                product={product} 
+                units={units}
+                setUnits={setUnits}
+                unitsProduct={unitsProduct}
+                imgSize={imgSize}
+              />
+              </>
+            );
+          })}
+        </section>
 
           <div>
             {units ? 

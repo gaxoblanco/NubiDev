@@ -14,7 +14,7 @@ export const ProductDetailPaged = () => {
       })
     
     
-    const options = [
+    const [options, setOptions] = useState([
       {
         name: 'Descripcion',
         data: itemData.description,
@@ -30,25 +30,26 @@ export const ProductDetailPaged = () => {
         data: itemData.characteristic,
         isOn: false
       }
-    ];
+    ]);
 
 
     
 
 
-    const handleClickActive = (e) =>{
-      console.log('0', e);
+    const handleClickActive = (name) =>{
       //paso cada options[x].isOn a false para que no sea visible 
       options.map(item => item.isOn = false);
 
-      //busco la posicion del item que coincida con e y la paso a true.
-      options[options.findIndex(item=> item.name == e)].isOn = true
+      //busco la posicion del elemento con el mismo name en el array options
+      const index = options.findIndex(item => item.name === name);
+      //cambio el valor de isOn a true
+      options[index].isOn = true;
 
       //setInfo siempre va a ser el objeto que sea True en el array options
       setInfo (options.find(item => item.isOn));
       
     }
-console.log(info.data);
+console.log("options", options);
     
   return (
     <div className='min-h-[15rem]'>
@@ -58,7 +59,7 @@ console.log(info.data);
               key={item.name}
               onClick={()=>handleClickActive(item.name)}
               className={` 
-              ${options.isOn 
+              ${item.isOn 
                 ? 'bg-gray-100 productDetail-buttonMoreData' 
                 : "bg-none productDetail-buttonMoreData"}`}
             >

@@ -26,3 +26,6 @@
     display: flex;
     justify-content: space-around;
   }
+  .bg-peach-fuzz--300 {
+    background-color: #FEE2D4;
+  }

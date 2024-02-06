@@ -1,4 +1,7 @@
 import React, {useState} from 'react'
+//importo la img del logo
+import logo from '../../assets/milogo.jpg'
+import color from '../../assets/PeachFuzzColor.jpg'
 
 export const Header = ({open, setOpen})=>{
 
@@ -15,7 +18,7 @@ export const Header = ({open, setOpen})=>{
 
             <img 
                 className="logo-header" 
-                src="https://i.imgur.com/lRZqdqd.jpg" 
+                src={color}
                 alt="logo" />
 
             <button

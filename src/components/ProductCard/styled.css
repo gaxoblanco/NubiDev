@@ -1,11 +1,10 @@
 
 .prodcut-card{
-    padding: 1.2rem 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+    background:#FFC39E;
 }
 
 .product-card--img {
-    width:150px;
+    /* width:100%; */
     max-height: auto;
     object-fit: cover;
     margin-right: 10px;

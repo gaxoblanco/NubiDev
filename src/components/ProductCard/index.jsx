@@ -6,25 +6,32 @@ import {Price, Parrafo, StateStock, IconStar, OnOff} from '../css/styles';
 
 
 
-export const ProductCard = ({product, unitsProduct, setUnits, units})=>{
+export const ProductCard = ({product, unitsProduct, setUnits, imgSize})=>{
     
-
+    // si imgSize aun no existe cargo 100
+    // imgSize = imgSize ? imgSize : 100;
 
     return (
-        <div className="prodcut-card relative duration-500 ease-in-out hover:scale-105">
+        <div className={`prodcut-card relative duration-500 ease-in-out hover:scale-105 p-4 m-4 rounded-2xl max-w-[360px] `}
+        // agrego un style width
+        style={{width: imgSize + 'px'}}
+        >
             <Link 
                 onClick={()=> unitsProduct(product)} 
                 className="absolute h-full w-10/12"
                 to='/detalleproducto' >
             </Link>
-            <section className="product-card-container flex rounded-lg">
+            <section className="product-card-container grid rounded-lg ">
                 <OnOff 
                     className="bg-cuarto absolute px-4 rounded-lg"
                     isOff={product.discoutOffert ? false : true}
                 >
                     <p className="decoration-slate-200">{product.discoutOffert} % Off</p>
                 </OnOff>
-                <img className="product-card--img rounded-lg" src={product.img.url1} alt={product.img.alt}/>
+                <figure>
+                    <img className="product-card--img rounded-lg " src={product.img.url1} alt={product.img.alt} width={100 + '%;'} 
+                    height={100 + '%;'} />
+                </figure>
                 <div className="size-full min-h-28 flex flex-col justify-around">
                     <Parrafo 
                         marginR={true}
