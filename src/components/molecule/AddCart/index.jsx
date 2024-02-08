@@ -1,8 +1,8 @@
 import React, {useContext, useState, useEffect} from 'react';
-import {AddProduct} from '../AddProduct/index';
-import {Btn} from '../css/Button';
-import {Price, Parrafo, Icon} from '../css/styles';
-import {AppContext} from '../../context/AppContex';
+import {AddProduct} from '../../AddProduct/index';
+import {Btn} from '../../css/Button';
+import {Price, Parrafo, Icon} from '../../css/styles';
+import {AppContext} from '../../../context/AppContex';
 
 export const AddCart = ({units, setUnits, itemData})=>{
     const {state, addToCart, edditToCart} = useContext(AppContext);

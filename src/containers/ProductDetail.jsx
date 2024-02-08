@@ -3,7 +3,7 @@ import {AppContext} from '../context/AppContex';
 import {Btn} from '../components/css/Button';
 import {Price, Parrafo, StateStock, IconStar, OnOff} from '../components/css/styles';
 
-import {AddCart} from '../components/AddCart';
+import {AddCart} from '../components/molecule/AddCart';
 import {ProdcutDetail} from '../components/ProductDetail';
 import {ProductSuggested} from '../components/ProductSuggested';
 import {ButtonCart} from '../components/ButtonCart';

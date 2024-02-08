@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
-import {CartCard} from '../CartCard';
-import {AddCart} from '../AddCart';
+import {CartCard} from '../molecule/CartCard';
+import {AddCart} from '../molecule/AddCart';
 import {OnOff, Price, Parrafo} from '../css/styles';
 import {AppContext} from '../../context/AppContex';
 

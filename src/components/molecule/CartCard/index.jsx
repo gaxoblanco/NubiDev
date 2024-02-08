@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import {Price, Parrafo, OnOff, Icon} from '../css/styles';
-import {AppContext} from '../../context/AppContex';
+import {Price, Parrafo, OnOff, Icon} from '../../css/styles';
+import {AppContext} from '../../../context/AppContex';
 
 export const CartCard = ({product, off, unitsProduct, setUnits, units})=>{
     const {state, removeFromCart} = useContext(AppContext);

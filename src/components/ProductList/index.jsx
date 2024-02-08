@@ -1,6 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {ProductCard} from '../ProductCard';
-import {AddCart} from '../AddCart';
+import {AddCart} from '../molecule/AddCart';
 import {AppContext} from '../../context/AppContex';
 import {activeFilter} from '../atom/activeFilter';
 import {filterCard} from '../atom/filterCard';

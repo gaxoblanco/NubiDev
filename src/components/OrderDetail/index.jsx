@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react'
 import {AppContext} from '../../context/AppContex';
 import {Btn} from '../css/Button';
 import {Parrafo, Price} from '../css/styles'
-import {CartCard} from '../CartCard';
+import {CartCard} from '../molecule/CartCard';
 
 export const OrderDetail = ({product, name, email}) => {
   const {state} = useContext(AppContext);
