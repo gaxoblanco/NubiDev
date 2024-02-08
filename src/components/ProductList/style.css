@@ -1,5 +1,5 @@
 .product-list {
-  max-width: 800px;
+  max-width: 900px;
 }
 .show-element {
     /* duracion*/
@@ -8,6 +8,7 @@
     /* Animacion*/
     animation-name: fadeIn;
     background-color: rgb(225, 225, 255);
+    
   }
 
   @keyframes fadeIn {

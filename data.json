@@ -2,7 +2,7 @@
   "products": [
     {
       "_id": "1",
-      "name": "Gorra",
+      "name": "Gorra Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "slug": "gorra-1",
       "productCode": "PR001",
       "price": 88.5,

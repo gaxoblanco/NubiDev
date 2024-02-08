@@ -7,7 +7,7 @@ export const Header = ({open, setOpen})=>{
 
 
     return (
-        <header className="container-header relative">
+        <header className="container-header relative h-20 bg-[#FBD5CA] mb-10 p-4">
             <a
                 className="w-8"
                 href="">

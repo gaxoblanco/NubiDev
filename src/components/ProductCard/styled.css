@@ -1,6 +1,7 @@
 
-.prodcut-card{
-    background:#FFC39E;
+.shadow-component {
+    box-shadow:  5px 5px 21px #dbd4c5,
+    -5px -5px 21px #ffffff;
 }
 
 .product-card--img {

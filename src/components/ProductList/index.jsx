@@ -54,13 +54,13 @@ export const ProductList = () => {
   let img2 = 0;
   const imageSize = (index) => {
     if(boolean){
-      imgSize = (index % 2) === 0 ? 340 : 260;
+      imgSize = (index % 2) === 0 ? 240 : 340;
       boolean = (index % 2) === 0 ? true : false;
 
       // return imgSize;
     }
     else {
-      imgSize = (index % 2) === 0 ? 260 : 340;
+      imgSize = (index % 2) === 0 ? 340 : 240;
       boolean = (index % 2) === 0 ? false : true;
 
       // return imgSize;
@@ -72,7 +72,7 @@ export const ProductList = () => {
   return (
       <article className='page-list-products mx-8'>
           {/* filtro de productos */}
-          <section className="w-60 peach-fuzz--300">
+          <section className="shadow-component w-72 peach-fuzz--300 bg-[#FBD5CA] rounded-xl max-h-[600px] p-5">
             <h2 className="mb-4">Filtrar productos</h2>
             <form className="search-form mb-4 relative text-base">
               <input type="text" placeholder="Buscar productos" />

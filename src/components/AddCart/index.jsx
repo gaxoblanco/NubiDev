@@ -40,7 +40,7 @@ export const AddCart = ({units, setUnits, itemData})=>{
     
     return(
         <span>
-        <div className="bg-white relative mx-12 rounded-xl container-addCart p-4">
+        <div className="bg-[#FFC39E] relative mx-12 rounded-xl container-addCart p-4">
             <div className="container-addCart--img relative">
                 <img 
                     className="img-productCardSmall mb-4 mr-4" 
