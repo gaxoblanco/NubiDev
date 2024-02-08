@@ -29,7 +29,7 @@ export const ProdcutDetail = () => {
     }, [])
 
   return (
-    <div className="productDetail w-11/12">
+    <div className="productDetail w-11/12 bg-[#FFC39E]">
             <div className="productDetail-Section">
               <AddProduct
                 unit={item.units != null ? item.units : unit}
