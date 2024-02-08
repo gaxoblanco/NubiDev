@@ -6,7 +6,7 @@ import {Price, Parrafo, StateStock, IconStar, OnOff} from '../components/css/sty
 import {AddCart} from '../components/molecule/AddCart';
 import {ProdcutDetail} from '../components/ProductDetail';
 import {ProductSuggested} from '../components/ProductSuggested';
-import {ButtonCart} from '../components/ButtonCart';
+import {ButtonCart} from '../components/atom/ButtonCart';
 
 export const ProductDetail = () => {
     const {state, itemData, setItemData } = useContext(AppContext);

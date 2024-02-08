@@ -1,8 +1,8 @@
 // import { list } from 'postcss';
 import React from 'react';
 import {Link} from 'react-router-dom'
-import {Btn} from '../css/Button';
-import {Price, Parrafo, StateStock, OnOff} from '../css/styles';
+import {Btn} from '../../css/Button';
+import {Price, Parrafo, StateStock, OnOff} from '../../css/styles';
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 import initialState from '../initialState';
-import {ProductList} from '../components/ProductList';
-import {ButtonCart} from '../components/ButtonCart';
+import {ProductList} from '../components/organism/ProductList';
+import {ButtonCart} from '../components/atom/ButtonCart';
 
 export const Home = () => {
   return (

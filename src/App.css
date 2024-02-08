@@ -1,5 +1,5 @@
 @import url('./components/Header/styled.css');
-@import url('./components/ProductCard/styled.css');
+@import url('./components/molecule/ProductCard/styled.css');
 @import url('./components/molecule/AddCart/styled.css');
 @import url('./components/molecule/CartCard/styled.css');
 @import url('./components/Search/styled.css');

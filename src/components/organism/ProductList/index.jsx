@@ -1,15 +1,15 @@
 import React, {useContext, useState, useEffect} from 'react'
-import {ProductCard} from '../ProductCard';
-import {AddCart} from '../molecule/AddCart';
-import {AppContext} from '../../context/AppContex';
-import {activeFilter} from '../atom/activeFilter';
-import {filterCard} from '../atom/filterCard';
+import {ProductCard} from '../../molecule/ProductCard';
+import {AddCart} from '../../molecule/AddCart';
+import {AppContext} from '../../../context/AppContex';
+import {activeFilter} from '../../atom/activeFilter';
+import {filterCard} from '../../atom/filterCard';
 
 // icons
-import columnsGap from '../../assets/categories/columns-gap.svg';
-import backpack from '../../assets/categories/backpack.svg';
-import cups from '../../assets/categories/cup-straw.svg';
-import luggage from '../../assets/categories/luggage.svg';
+import columnsGap from '../../../assets/categories/columns-gap.svg';
+import backpack from '../../../assets/categories/backpack.svg';
+import cups from '../../../assets/categories/cup-straw.svg';
+import luggage from '../../../assets/categories/luggage.svg';
 
 
 import './style.css';
