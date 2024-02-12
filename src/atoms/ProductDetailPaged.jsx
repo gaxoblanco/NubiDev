@@ -60,7 +60,7 @@ console.log("options", options);
               onClick={()=>handleClickActive(item.name)}
               className={` 
               ${item.isOn 
-                ? 'bg-gray-100 productDetail-buttonMoreData' 
+                ? 'border-[#FBD5CA] border-t-4 border-x-2 border-solid productDetail-buttonMoreData' 
                 : "bg-none productDetail-buttonMoreData"}`}
             >
               <Parrafo>{item.name}</Parrafo>
@@ -68,7 +68,7 @@ console.log("options", options);
           ))}
 
         </div>
-        <Parrafo positionLeft={true} className="bg-gray-100 p-4 rounded-b-lg min-h-[10rem]">
+        <Parrafo positionLeft={true} className="border-[#FBD5CA] p-4 rounded-b-lg min-h-[10rem]">
               {info.name == 'Descripcion' 
                 ? info.data : (info.name == 'Medidas' 
                 ? <Medidas info={info} /> : <Caracteristicas info={info}/>)

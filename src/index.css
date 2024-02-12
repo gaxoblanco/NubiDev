@@ -10,6 +10,9 @@
 	border: 0;
     /* font-size: 62.5%; */
 }
+.grid_tc-21 {
+  grid-template-columns: 2fr 1fr;
+}
 
 @layer base {
     body {

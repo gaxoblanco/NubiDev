@@ -29,7 +29,7 @@ export const ProdcutDetail = () => {
     }, [])
 
   return (
-    <div className="productDetail w-11/12 bg-[#FFC39E]">
+    <div className="w-full rounded-xl bg-[#FFC39E]">
             <div className="productDetail-Section">
               <AddProduct
                 unit={item.units != null ? item.units : unit}
