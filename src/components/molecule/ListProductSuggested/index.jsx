@@ -5,7 +5,6 @@ export const ListProductSuggested = ({ products }) => {
   const containerRef = useRef(null);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [timeoutId, setTimeoutId] = useState(null);
 
   //funcion para la posicion del mouse
   const handleMouseDown = (e) => {

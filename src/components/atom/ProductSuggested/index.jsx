@@ -13,6 +13,7 @@ export const ProductSuggested = ({ product }) => {
     >
       <img className="w-40 rounded-xl" src={product.img.url1} />
       <Parrafo>{product.name}</Parrafo>
+      <Parrafo>{product.price}</Parrafo>
     </Link>
   );
 };

@@ -29,13 +29,6 @@ export const ProductDetail = () => {
         <div className="w-[50vw]">
           <Carousel />
           {/* more products */}
-          {/* <div className="flex overflow-x-scroll  mt-4">
-            <div className="flex gap-4">
-              {products.map((product) => (
-                <ProductSuggested key={product._id} product={product} />
-              ))}
-            </div>
-          </div> */}
           <ListProductSuggested products={products} />
         </div>
 
