@@ -44,9 +44,13 @@ export const Carousel = () => {
   }, [currentSlide]);
 
   return (
-    <div id="default-carousel" className="flex gap-4" data-carousel="slide">
+    <div
+      id="default-carousel"
+      className="flex gap-4 place-content-evenly"
+      data-carousel="slide"
+    >
       {/* list img */}
-      <div className="grid gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px]">
+      <div className="grid gap-6 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] place-content-evenly">
         {[...Array(5)].map((_, index) => (
           <img
             key={index}
@@ -71,7 +75,7 @@ export const Carousel = () => {
         ))}
       </div>
       <div className="relative w-68 flex">
-        <div className="relative w-[40vw] h-[40vw] overflow-hidden rounded-xl ">
+        <div className="relative w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] overflow-hidden rounded-xl ">
           {[...Array(5)].map((_, index) => (
             <div
               key={index}
@@ -82,7 +86,7 @@ export const Carousel = () => {
             >
               <img
                 src={`https://picsum.photos/200?random=${index}`}
-                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
                 alt={`Slide ${index + 1}`}
               />
             </div>

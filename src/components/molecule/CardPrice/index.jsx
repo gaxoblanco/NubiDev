@@ -8,13 +8,13 @@ export const CardPrice = () => {
       const scrollY = window.scrollY;
       const fixedDiv = document.getElementById("informationModal");
 
-      if (scrollY <= 200) {
+      if (scrollY <= 260) {
         fixedDiv.classList.remove("fixed");
-        fixedDiv.classList.remove("w-[28.5rem]");
+        fixedDiv.classList.remove("w-[26rem]");
         fixedDiv.classList.add("w-full");
       } else {
         fixedDiv.classList.add("fixed");
-        fixedDiv.classList.add("w-[28.5rem]");
+        fixedDiv.classList.add("w-[26rem]");
         fixedDiv.classList.remove("w-full");
       }
     };
@@ -41,10 +41,7 @@ export const CardPrice = () => {
         </p>
         <a className="text-2xl font-semibold pl-4">10 u - $120</a>
       </section>
-      <section className="">
-        <Parrafo marginR={true} isGray={true}>
-          cu
-        </Parrafo>
+      <section className="pt-4">
         <Price is40={true} isBold={true}>
           $100
         </Price>
@@ -53,7 +50,7 @@ export const CardPrice = () => {
       <section className="py-4 border-solid border-b-2 border-[#FFF6E5]">
         <h3 className="mb-2">Variacion</h3>
         {/* listado de imgs con la imagen de las variaciones  */}
-        <div className="flex gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] mb-6">
+        <div className="flex gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] mb-6 place-content-evenly">
           {[...Array(5)].map((_, index) => (
             <img
               key={index}

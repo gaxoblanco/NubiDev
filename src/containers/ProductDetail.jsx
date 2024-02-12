@@ -11,11 +11,12 @@ import {
 
 import { AddCart } from "../components/molecule/AddCart";
 import { ProdcutDetail } from "../components/ProductDetail";
-import { ProductSuggested } from "../components/ProductSuggested";
+import { ProductSuggested } from "../components/atom/ProductSuggested";
 import { ButtonCart } from "../components/atom/ButtonCart";
 
 import { Carousel } from "../components/molecule/Carousel";
 import { CardPrice } from "../components/molecule/CardPrice";
+import { ListProductSuggested } from "../components/molecule/ListProductSuggested";
 
 export const ProductDetail = () => {
   const { state, itemData, setItemData } = useContext(AppContext);
@@ -24,19 +25,24 @@ export const ProductDetail = () => {
 
   return (
     <div className="grid place-items-center h-[1500px]">
-      <div className="px-[6rem] w-full grid grid_tc-21 gap-12 place-items-center">
-        <Carousel />
+      <div className="px-[6rem] w-full grid grid_tc-21 place-items-center items-start">
+        <div className="w-[50vw]">
+          <Carousel />
+          {/* more products */}
+          {/* <div className="flex overflow-x-scroll  mt-4">
+            <div className="flex gap-4">
+              {products.map((product) => (
+                <ProductSuggested key={product._id} product={product} />
+              ))}
+            </div>
+          </div> */}
+          <ListProductSuggested products={products} />
+        </div>
 
         {/* Card para realizar la compra dentro del detalle del producto */}
         <CardPrice />
       </div>
-      <div className="flex overflow-x-scroll w-11/12 mt-4">
-        <div className="flex gap-4">
-          {products.map((product) => (
-            <ProductSuggested key={product._id} product={product} />
-          ))}
-        </div>
-      </div>
+
       <ButtonCart />
 
       <div>
