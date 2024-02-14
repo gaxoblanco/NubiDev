@@ -19,7 +19,7 @@ import { CardPrice } from "../components/molecule/CardPrice";
 import { ListProductSuggested } from "../components/molecule/ListProductSuggested";
 
 export const ProductDetail = () => {
-  const { state, itemData, setItemData } = useContext(AppContext);
+  const { state, itemData, setItemData } = useContext(AppContext); // obtengo los datos del itemData - AppContext
   const [units, setUnits] = useState(Boolean);
   const { products } = state;
 
