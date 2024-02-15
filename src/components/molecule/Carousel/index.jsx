@@ -59,7 +59,7 @@ export const Carousel = () => {
               e.target.style.transform = "scale(1)";
               e.target.style.zIndex = "0";
             }}
-            alt={`Thumbnail ${index + 1}`}
+            alt={itemData.img["alt"]}
             onClick={() => setCurrentSlide(index)}
           />
         ))}
@@ -77,7 +77,7 @@ export const Carousel = () => {
               <img
                 src={imgUrl}
                 className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-2xl"
-                alt={`Slide ${index + 1}`}
+                alt={itemData.img["alt"]}
               />
             </div>
           ))}
