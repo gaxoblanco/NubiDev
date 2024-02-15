@@ -103,7 +103,7 @@ export const ProductList = () => {
         {units ? (
           <div
             event
-            className="fixed top-0 w-full h-full bg-transparent grid place-items-center left-0"
+            className="fixed top-0 w-full h-full bg-transparent grid left-0"
           >
             <AddCart itemData={itemData} setUnits={setUnits} units={units} />
           </div>

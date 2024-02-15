@@ -7,7 +7,10 @@ export const CardPrice = () => {
   const { state, itemData, setItemData } = useContext(AppContext);
 
   // convierto el objeto img en un array para poder iterar
-  const options = Object.entries(itemData.options).map(([_, value]) => value);
+  const options =
+    itemData.options && typeof itemData.options === "object"
+      ? Object.entries(itemData.options).map(([_, value]) => value)
+      : null;
 
   console.log("options", options);
 
@@ -55,39 +58,42 @@ export const CardPrice = () => {
           $100
         </Price>
       </section>
-      {/* variacion de color/opcion */}
-      <section className="py-4 border-solid border-b-2 border-[#FFF6E5]">
-        <h3 className="mb-2">Variacion</h3>
-        {/* listado de imgs con la imagen de las variaciones  */}
-        <div className="flex gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] mb-6 place-content-evenly">
-          {options.map((option, index) => (
-            <img
-              key={index}
-              src={option.img}
-              alt={option.value} // paso el value como un alt para personas con lectores de pantalla
-              className={`w-12 h-12 rounded-lg cursor-pointer`}
-              onMouseOver={(e) => {
-                e.target.style.transform = "scale(1.1)";
-                e.target.style.zIndex = "1";
-              }}
-              onMouseOut={(e) => {
-                e.target.style.transform = "scale(1)";
-                e.target.style.zIndex = "0";
-              }}
-            />
-          ))}
-        </div>
-        {/* button para abrir el modal y agregar N* podrutos al pedido */}
-        <button
-          className="px-8 py-2 bg-[#fff] rounded-lg font-medium w-full"
-          onClick={() => {
-            setUnits(!units);
-          }}
-          alt="Agregar al pedido"
-        >
-          Agregar al pedido
-        </button>
-      </section>
+      {/* variacion de color/opcion suponiendo que existe */}
+      {Array.isArray(options) ? (
+        <section className="py-4 border-solid border-b-2 border-[#FFF6E5]">
+          <h3 className="mb-2">Variacion</h3>
+          {/* listado de imgs con la imagen de las variaciones  */}
+          <div className="flex gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] mb-6 place-content-evenly">
+            {options.map((option, index) => (
+              <img
+                key={index}
+                src={option.img}
+                alt={option.value} // paso el value como un alt para personas con lectores de pantalla
+                className={`w-12 h-12 rounded-lg cursor-pointer`}
+                onMouseOver={(e) => {
+                  e.target.style.transform = "scale(1.1)";
+                  e.target.style.zIndex = "1";
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.transform = "scale(1)";
+                  e.target.style.zIndex = "0";
+                }}
+              />
+            ))}
+          </div>
+          {/* button para abrir el modal y agregar N* podrutos al pedido */}
+          <button
+            className="px-8 py-2 bg-[#fff] rounded-lg font-medium w-full"
+            onClick={() => {
+              setUnits(!units);
+            }}
+            alt="Agregar al pedido"
+          >
+            Agregar al pedido
+          </button>
+        </section>
+      ) : null}
+
       {/* detalles del proceso y medios de pago */}
       <section className="">
         <h3>Variacion</h3>

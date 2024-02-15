@@ -144,7 +144,25 @@
       "tag": ["blanco"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
-      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
+      "options": {
+        "option1": {
+          "value": "blanco",
+          "img": "https://picsum.photos/200#2"
+        },
+        "option2": {
+          "value": "negro",
+          "img": "https://picsum.photos/200#3"
+        },
+        "option3": {
+          "value": "mixto",
+          "img": "https://picsum.photos/200#4"
+        },
+        "option4": {
+          "value": "rojo",
+          "img": "https://picsum.photos/200#5"
+        }
+      }
     },
     {
       "_id": "5",
@@ -169,7 +187,25 @@
       "tag": ["gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
-      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
+      "options": {
+        "option1": {
+          "value": "blanco",
+          "img": "https://picsum.photos/200#2"
+        },
+        "option2": {
+          "value": "negro",
+          "img": "https://picsum.photos/200#3"
+        },
+        "option3": {
+          "value": "mixto",
+          "img": "https://picsum.photos/200#4"
+        },
+        "option4": {
+          "value": "rojo",
+          "img": "https://picsum.photos/200#5"
+        }
+      }
     },
     {
       "_id": "6",
@@ -194,7 +230,25 @@
       "tag": ["blanco", "gorra"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
-      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }]
+      "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
+      "options": {
+        "option1": {
+          "value": "blanco",
+          "img": "https://picsum.photos/200#2"
+        },
+        "option2": {
+          "value": "negro",
+          "img": "https://picsum.photos/200#3"
+        },
+        "option3": {
+          "value": "mixto",
+          "img": "https://picsum.photos/200#4"
+        },
+        "option4": {
+          "value": "rojo",
+          "img": "https://picsum.photos/200#5"
+        }
+      }
     },
     {
       "_id": "7",
