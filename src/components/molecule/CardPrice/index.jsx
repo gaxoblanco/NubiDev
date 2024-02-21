@@ -6,13 +6,13 @@ import { Price, Parrafo } from "../../css/styles";
 export const CardPrice = () => {
   const { state, itemData, setItemData } = useContext(AppContext);
 
-  // convierto el objeto img en un array para poder iterar
+  // suponiendo que options existe - convierto el objeto img en un array para poder iterar
   const options =
     itemData.options && typeof itemData.options === "object"
       ? Object.entries(itemData.options).map(([_, value]) => value)
       : null;
 
-  console.log("options", options);
+  // console.log("options", options);
 
   // useEffect para posicionar el informationModal en fixed
   useEffect(() => {

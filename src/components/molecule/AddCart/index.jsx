@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { AddProduct } from "../../AddProduct/index";
+import { AddProduct } from "../../atom/AddProduct/index";
 import { Btn } from "../../css/Button";
 import { Price, Parrafo, Icon } from "../../css/styles";
 import { AppContext } from "../../../context/AppContex";
@@ -7,25 +7,49 @@ import { AppContext } from "../../../context/AppContex";
 export const AddCart = ({ units, setUnits, itemData }) => {
   const { state, addToCart, edditToCart } = useContext(AppContext);
 
-  console.log("itemData", itemData);
+  //valido que options existe y lo convierto en array
+  const options =
+    itemData.options && typeof itemData.options === "object"
+      ? Object.entries(itemData.options).map(([_, value]) => value)
+      : null;
+
   //unidades y precio total segun unidades
   const [unit, setUnit] = useState(1);
+  const [selectOptions, setSelectOptions] = useState([]); // Estado para almacenar las opciones seleccionadas
+  // Calculamos el precio total según las unidades
   const total =
     (itemData.price ? itemData.price : itemData.itemData.price) * unit;
 
   const item = {
     _id: itemData._id,
-    units: unit,
     totalPrice: total,
-    itemData,
+    itemData: {
+      ...itemData,
+      options: selectOptions.map((option) => ({
+        value: option.value,
+        unit: option.unit,
+        img: option.img,
+      })), // Mantenemos solo el valor y la imagen de las opciones
+    },
   };
 
+  // useEffect(() => {
+  //   if (itemData.totalPrice != null) {
+  //     item._id = itemData._id;
+  //     setUnit(itemData.units);
+  //     item.itemData = itemData.itemData;
+  //     // console.log('itemData',itemData.itemData._id);
+  //   }
+  // }, []);
+
+  // Efecto para actualizar las unidades y opciones cuando cambia el itemData
   useEffect(() => {
     if (itemData.totalPrice != null) {
-      item._id = itemData._id;
-      setUnit(itemData.units);
-      item.itemData = itemData.itemData;
-      // console.log('itemData',itemData.itemData._id);
+      setSelectOptions(
+        itemData.options
+          ? itemData.options.map((option) => ({ ...option, unit: 1 }))
+          : []
+      ); // Inicializamos las unidades en 1 para todas las opciones
     }
   }, []);
 
@@ -42,15 +66,15 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   return (
     <span>
       <div className="bg-[#FFC39E] absolute h-full right-0 rounded-xl container-addCart p-4">
-        <div className="container-addCart--img relative">
+        <div className="container-addCart--img relative pt-12 border-solid border-b-2 border-[#FFF6E5] pb-8">
           <img
-            className="img-productCardSmall mb-4 mr-4"
+            className="img-productCardSmall mr-4"
             src={itemData.img.url1}
             alt={itemData.img.alt}
           />
-          <Parrafo className="mt-6" is20={true} positionLeft={true}>
+          <p className="">
             {itemData.description ? itemData.description : itemData.nombre}
-          </Parrafo>
+          </p>
           <button
             className="absolute top-0  right-0 z-10"
             type="button"
@@ -66,16 +90,51 @@ export const AddCart = ({ units, setUnits, itemData }) => {
             </Icon>
           </button>
         </div>
-        <div className="container-addCart--number">
-          <AddProduct
-            unit={item.units != null ? item.units : unit}
-            setUnit={setUnit}
-            stock={
-              itemData.stock == null ? itemData.itemData.stock : itemData.stock
-            }
-          />
-          <Price>${item.totalPrice}</Price>
-        </div>
+        {/* itero options */}
+        {Array.isArray(options) ? (
+          options.map((option, index) => (
+            <div className="flex gap-3 place-content-around my-4 border-solid border-b-2 border-[#FFF6E5]">
+              <img
+                key={index}
+                className="img-productCardSmall mb-4 mr-4 w-14 h-14"
+                src={option.img}
+                alt={option.value}
+              />
+              {/* atom - cantidad de productos */}
+              <AddProduct
+                setSelectOptions={setSelectOptions}
+                selectOptions={selectOptions}
+                option={option}
+                stock={
+                  itemData.stock == null
+                    ? itemData.itemData.stock
+                    : itemData.stock
+                }
+              />
+              <Price>${item.totalPrice}</Price>
+            </div>
+          ))
+        ) : (
+          // si option no existe muestro img 1 y solo el unico elemento
+          <div className="flex gap-3 place-content-around my-4">
+            <img
+              className="img-productCardSmall mb-4 mr-4 w-14 h-14"
+              src={itemData.img["url1"]}
+              alt={itemData.img["alt"]}
+            />
+            {/* atom - cantidad de productos */}
+            <AddProduct
+              unit={item.units != null ? item.units : unit}
+              setSelectOptions={setSelectOptions}
+              stock={
+                itemData.stock == null
+                  ? itemData.itemData.stock
+                  : itemData.stock
+              }
+            />
+            <Price>${item.totalPrice}</Price>
+          </div>
+        )}
         <Btn
           wSize={"300"}
           isGreen={true}

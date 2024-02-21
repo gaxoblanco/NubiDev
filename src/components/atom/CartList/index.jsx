@@ -75,7 +75,11 @@ export const CartList = ({ Off, precioTotal, unitTotal }) => {
           // onClick={()=>{setUnits(!units)}}
           className="fixed top-0 w-full h-full bg-transparent grid place-items-center p-50%"
         >
-          <AddCart itemData={itemData} setUnits={setUnits} units={units} />
+          <AddCart
+            itemData={itemData.img[1]}
+            setUnits={setUnits}
+            units={units}
+          />
         </div>
       ) : null}
     </div>
