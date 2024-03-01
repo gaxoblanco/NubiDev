@@ -33,14 +33,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     },
   };
 
-  // useEffect(() => {
-  //   if (itemData.totalPrice != null) {
-  //     item._id = itemData._id;
-  //     setUnit(itemData.units);
-  //     item.itemData = itemData.itemData;
-  //     // console.log('itemData',itemData.itemData._id);
-  //   }
-  // }, []);
+  console.log(itemData);
 
   // Efecto para actualizar las unidades y opciones cuando cambia el itemData
   useEffect(() => {
@@ -62,6 +55,11 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     edditToCart(item);
     setUnits(false);
   };
+
+  // userEfect para un console log donde veo el selectOptions
+  useEffect(() => {
+    console.log("useEffect- selectOptions", selectOptions);
+  }, [selectOptions]);
 
   return (
     <span>
@@ -100,6 +98,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                 src={option.img}
                 alt={option.value}
               />
+              <p>{option.value}</p>
               {/* atom - cantidad de productos */}
               <AddProduct
                 setSelectOptions={setSelectOptions}
@@ -111,6 +110,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                     : itemData.stock
                 }
               />
+              {/* atom - cantidad de productos */}
               <Price>${item.totalPrice}</Price>
             </div>
           ))

@@ -2,37 +2,35 @@ import React, { useState } from "react";
 import { Parrafo, Icon } from "../../css/styles";
 
 export const AddProduct = ({
-  unit,
   selectOptions,
   setSelectOptions,
   stock,
   option,
 }) => {
-  //funcion de sumar y restar con los botones, retornando una variable
-  // console.log("option--", option);
-  // const menos = () => {
-  //   if (unit > 1) {
-  //     setUnit(unit - 1);
-  //   }
-  // };
-  // const more = () => {
-  //   if (unit <= stock) {
-  //     setUnit(unit + 1);
-  //   }
-  // };
+  // inicializo unit en 0
+  option.unit = 0;
+  const [unit, setUnit] = useState(option.unit); // Estado para almacenar la cantidad de unidades
 
   // Función para disminuir la cantidad de unidades de la opción específica
-  const menos = () => {
-    if (option.unit > 1) {
-      setSelectOptions((prevOptions) => {
-        // Actualizamos solo la unidad de la opción específica
-        return prevOptions.map((prevOption) => {
-          if (prevOption === option) {
-            return { ...prevOption, unit: prevOption.unit - 1 };
-          }
-          return prevOption;
+  const less = () => {
+    // Verificamos si la opción ya está presente en el estado
+    const indexOption = selectOptions.findIndex(
+      (op) => op.value === option.value
+    );
+    // consulto si indexOption es mayor a -1, si es mayor a -1 significa que la opción ya está presente en el estado
+    if (indexOption > -1) {
+      // si la cantidad de unidades es mayor a 0, disminuyo la cantidad de unidades
+      if (unit > 0) {
+        setSelectOptions((prevOptions) => {
+          return prevOptions.map((prevOption, index) => {
+            if (index === indexOption) {
+              return { ...prevOption, unit: prevOption.unit - 1 };
+            }
+            return prevOption;
+          });
         });
-      });
+        setUnit((prevUnit) => prevUnit - 1);
+      }
     }
   };
 
@@ -40,35 +38,41 @@ export const AddProduct = ({
   const more = () => {
     // Verificamos si la opción ya está presente en el estado
     const existingOption = selectOptions.find(
-      (option) => option.value === option.value
+      (op) => op.value === option.value
     );
-
-    // Si la opción no está presente, la agregamos al estado con cantidad 1
+    // si existingOption es undefined, significa que la opción no está presente y la agrego en el arreglo selectOptions
     if (!existingOption) {
-      // agrego option.value y unit = 1 al array setSelectOptions
-      setSelectOptions((prevOptions) => [
-        ...prevOptions,
-        { ...option, unit: 1 },
-      ]);
-      console.log("existingOption = false");
-      console.log("selectOptions", selectOptions);
-    } else {
-      // Si la opción ya está presente, incrementamos su cantidad en 1
-      setSelectOptions((prevOptions) =>
-        prevOptions.map((prevOption) =>
-          prevOption.value === option.value
-            ? { ...prevOption, unit: prevOption.unit + 1 }
-            : prevOption
-        )
+      // Crear una copia del objeto option y actualizar el campo unit en la copia
+      const updatedOption = { ...option, unit: 1 };
+
+      // Agregar la copia actualizada al arreglo selectOptions
+      setSelectOptions([...selectOptions, updatedOption]);
+
+      // Aumentar la cantidad de unidades (no estoy seguro de dónde obtienes el valor de setUnit, así que esto podría variar dependiendo de tu implementación)
+      setUnit(1);
+    }
+    // si existingOption es true, significa que la opción ya está presente y actualizo la cantidad
+    else {
+      // Verificamos si la opción ya está presente en el estado
+      const indexOption = selectOptions.findIndex(
+        (op) => op.value === option.value
       );
-      console.log("existingOption = true");
-      console.log("selectOptions", selectOptions);
+      // en setSelectOptions guardo todo lo que tengo y al elemento en el indexOption le sumo 1
+      setSelectOptions((prevOptions) => {
+        return prevOptions.map((prevOption, index) => {
+          if (index === indexOption) {
+            return { ...prevOption, unit: prevOption.unit + 1 };
+          }
+          return prevOption;
+        });
+      });
+      setUnit((prevUnit) => prevUnit + 1); // Aumento la cantidad de unidades
     }
   };
 
   return (
     <div className="container-addProduct">
-      <button onClick={menos}>
+      <button onClick={less}>
         <Icon
           isSecondaryColor={true}
           is32={true}
