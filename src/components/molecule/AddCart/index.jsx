@@ -17,12 +17,12 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   const [unit, setUnit] = useState(1);
   const [selectOptions, setSelectOptions] = useState([]); // Estado para almacenar las opciones seleccionadas
   // Calculamos el precio total según las unidades
-  const total =
-    (itemData.price ? itemData.price : itemData.itemData.price) * unit;
+  // const total =
+  //   (itemData.price ? itemData.price : itemData.itemData.price) * unit;
 
   const item = {
     _id: itemData._id,
-    totalPrice: total,
+    totalPrice: itemData.price,
     itemData: {
       ...itemData,
       options: selectOptions.map((option) => ({
@@ -34,21 +34,13 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   };
 
   console.log(itemData);
-
-  // Efecto para actualizar las unidades y opciones cuando cambia el itemData
-  useEffect(() => {
-    if (itemData.totalPrice != null) {
-      setSelectOptions(
-        itemData.options
-          ? itemData.options.map((option) => ({ ...option, unit: 1 }))
-          : []
-      ); // Inicializamos las unidades en 1 para todas las opciones
-    }
-  }, []);
+  // Declara un estado para totalUnits
+  const [totalUnits, setTotalUnits] = useState(0);
 
   //agrego al carrito itemData
-  const handleAddToCart = (item) => () => {
-    addToCart(item);
+  const handleAddToCart = (selectOptions) => () => {
+    console.log("handleAddToCart", selectOptions); // obengo un array de opciones sobre el itemProduct
+    addToCart(item); // pasar selectOptions en lugarde item ----------------------------------------------------------------
     setUnits(false);
   };
   const handleEdditToProduct = (item) => () => {
@@ -58,8 +50,19 @@ export const AddCart = ({ units, setUnits, itemData }) => {
 
   // userEfect para un console log donde veo el selectOptions
   useEffect(() => {
-    console.log("useEffect- selectOptions", selectOptions);
-  }, [selectOptions]);
+    //valido que selectOptions sea un objeto
+    if (selectOptions[0]) {
+      console.log("useEffect- selectOptions", selectOptions[0]);
+      let object = selectOptions[0];
+
+      setTotalUnits(object["unit"] * itemData["price"]);
+    }
+  }, [selectOptions, unit]);
+
+  useEffect(() => {
+    console.log("useEffect- totalUnits", totalUnits);
+    console.log("itemData", itemData["price"]);
+  }, [totalUnits]);
 
   return (
     <span>
@@ -111,7 +114,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                 }
               />
               {/* atom - cantidad de productos */}
-              <Price>${item.totalPrice}</Price>
+              <Price>${totalUnits ? totalUnits : 0}</Price>
             </div>
           ))
         ) : (
@@ -132,7 +135,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                   : itemData.stock
               }
             />
-            <Price>${item.totalPrice}</Price>
+            {/* <Price>${item.totalPrice}</Price> */}
           </div>
         )}
         <Btn
@@ -140,7 +143,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
           isGreen={true}
           is22={true}
           type="button"
-          onClick={handleAddToCart(item)}
+          onClick={handleAddToCart(selectOptions)}
         >
           Agregar al Carrito
         </Btn>
