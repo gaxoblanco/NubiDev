@@ -6,6 +6,8 @@ export const AddProduct = ({
   setSelectOptions,
   stock,
   option,
+  optionWorking,
+  setOptionWorking,
 }) => {
   // inicializo unit en 0
   option.unit = 0;
@@ -24,8 +26,12 @@ export const AddProduct = ({
         setSelectOptions((prevOptions) => {
           return prevOptions.map((prevOption, index) => {
             if (index === indexOption) {
+              // devuelvo el elemento con que estoy trabajando
+              setOptionWorking(option);
               return { ...prevOption, unit: prevOption.unit - 1 };
             }
+            // devuelvo el elemento con que estoy trabajando
+            setOptionWorking(option);
             return prevOption;
           });
         });
@@ -50,6 +56,9 @@ export const AddProduct = ({
 
       // Aumentar la cantidad de unidades (no estoy seguro de dónde obtienes el valor de setUnit, así que esto podría variar dependiendo de tu implementación)
       setUnit(1);
+
+      // devuelvo el elemento con que estoy trabajando
+      setOptionWorking(option);
     }
     // si existingOption es true, significa que la opción ya está presente y actualizo la cantidad
     else {
@@ -67,6 +76,9 @@ export const AddProduct = ({
         });
       });
       setUnit((prevUnit) => prevUnit + 1); // Aumento la cantidad de unidades
+
+      // devuelvo el elemento con que estoy trabajando
+      setOptionWorking(option);
     }
   };
 

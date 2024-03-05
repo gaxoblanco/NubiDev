@@ -24,28 +24,32 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "blanco",
           "units": "100",
           "img": "https://picsum.photos/200#2"
         },
-        "option2": {
+        {
+          "price": 8.5,
           "value": "negro",
           "units": "100",
           "img": "https://picsum.photos/200#3"
         },
-        "option3": {
+        {
+          "price": 45.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#4"
         },
-        "option4": {
+        {
+          "price": 1.5,
           "value": "rojo",
           "units": "100",
           "img": "https://picsum.photos/200#5"
         }
-      }
+      ]
     },
     {
       "_id": "2",
@@ -71,23 +75,26 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "conTapa",
           "units": "100",
           "img": "https://picsum.photos/200#6"
         },
-        "option2": {
+        {
+          "price": 88.5,
           "value": "sinTapa",
           "units": "100",
           "img": "https://picsum.photos/200#7"
         },
-        "option3": {
+        {
+          "price": 88.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#8"
         }
-      }
+      ]
     },
     {
       "_id": "3",
@@ -113,23 +120,26 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "conTapa",
           "units": "100",
           "img": "https://picsum.photos/200#6"
         },
-        "option2": {
+        {
+          "price": 88.5,
           "value": "sinTapa",
           "units": "100",
           "img": "https://picsum.photos/200#7"
         },
-        "option3": {
+        {
+          "price": 88.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#8"
         }
-      }
+      ]
     },
     {
       "_id": "4",
@@ -155,28 +165,32 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "blanco",
           "units": "100",
           "img": "https://picsum.photos/200#2"
         },
-        "option2": {
+        {
+          "price": 88.5,
           "value": "negro",
           "units": "100",
           "img": "https://picsum.photos/200#3"
         },
-        "option3": {
+        {
+          "price": 88.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#4"
         },
-        "option4": {
+        {
+          "price": 88.5,
           "value": "rojo",
           "units": "100",
           "img": "https://picsum.photos/200#5"
         }
-      }
+      ]
     },
     {
       "_id": "5",
@@ -202,28 +216,32 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "blanco",
           "units": "100",
           "img": "https://picsum.photos/200#2"
         },
-        "option2": {
+        {
+          "price": 88.5,
           "value": "negro",
           "units": "100",
           "img": "https://picsum.photos/200#3"
         },
-        "option3": {
+        {
+          "price": 88.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#4"
         },
-        "option4": {
+        {
+          "price": 88.5,
           "value": "rojo",
           "units": "100",
           "img": "https://picsum.photos/200#5"
         }
-      }
+      ]
     },
     {
       "_id": "6",
@@ -249,28 +267,32 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi. Sed euismod, nisl eget fermentum aliquam, augue velit ultricies nunc, quis aliquet eros quam quis nunc. Nulla facilisi.",
       "measures": [{ "ancho": 30, "alto": 20, "profundidad": 35 }],
       "characteristic": [{ "nombre": "Volumen", "valor": "100x100cm3" }],
-      "options": {
-        "option1": {
+      "options": [
+        {
+          "price": 88.5,
           "value": "blanco",
           "units": "100",
           "img": "https://picsum.photos/200#2"
         },
-        "option2": {
+        {
+          "price": 88.5,
           "value": "negro",
           "units": "100",
           "img": "https://picsum.photos/200#3"
         },
-        "option3": {
+        {
+          "price": 88.5,
           "value": "mixto",
           "units": "100",
           "img": "https://picsum.photos/200#4"
         },
-        "option4": {
+        {
+          "price": 88.5,
           "value": "rojo",
           "units": "100",
           "img": "https://picsum.photos/200#5"
         }
-      }
+      ]
     },
     {
       "_id": "7",

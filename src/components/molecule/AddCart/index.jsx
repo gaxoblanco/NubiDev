@@ -47,22 +47,31 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     edditToCart(item);
     setUnits(false);
   };
-
+  const [optionWorking, setOptionWorking] = useState({});
   // userEfect para un console log donde veo el selectOptions
   useEffect(() => {
     //valido que selectOptions sea un objeto
     if (selectOptions[0]) {
-      console.log("useEffect- selectOptions", selectOptions[0]);
+      console.log("useEffect- selectOptions", selectOptions);
       let object = selectOptions[0];
+      console.log("optionWorking---", optionWorking);
 
-      setTotalUnits(object["unit"] * itemData["price"]);
+      // valido que optionWorking tenga el campo price
+      if (optionWorking["price"] != null) {
+        setTotalUnits(object["unit"] * optionWorking["price"]);
+      }
     }
   }, [selectOptions, unit]);
 
   useEffect(() => {
     console.log("useEffect- totalUnits", totalUnits);
-    console.log("itemData", itemData["price"]);
+    console.log("itemData", itemData);
+    console.log("chek", itemData["options"][1]["price"]);
   }, [totalUnits]);
+
+  useEffect(() => {
+    console.log("optionWorking--xxx", optionWorking);
+  }, [optionWorking]);
 
   return (
     <span>
@@ -107,6 +116,8 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                 setSelectOptions={setSelectOptions}
                 selectOptions={selectOptions}
                 option={option}
+                optionWorking={optionWorking}
+                setOptionWorking={setOptionWorking}
                 stock={
                   itemData.stock == null
                     ? itemData.itemData.stock
@@ -114,7 +125,9 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                 }
               />
               {/* atom - cantidad de productos */}
-              <Price>${totalUnits ? totalUnits : 0}</Price>
+              <Price>
+                ${totalUnits ? totalUnits : itemData["options"][index]["price"]}
+              </Price>
             </div>
           ))
         ) : (

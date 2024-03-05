@@ -1,0 +1,12 @@
+productCode: El código del producto, "PR001".
+price: El precio del producto, 88.5 dólares en este caso.
+stock: La cantidad disponible en stock del producto, 100 unidades.
+discountOffer: Cualquier oferta de descuento aplicable al producto. En este caso, no hay ninguna (valor null).
+intro: Una breve introducción o descripción corta del producto.
+img: Un objeto que contiene URLs de imágenes del producto, junto con un atributo de texto alternativo (alt) para accesibilidad.
+category: Información sobre la categoría del producto, incluyendo el nombre, slug (para URL) e icono representativo.
+tag: Etiquetas asociadas al producto, que pueden ser útiles para búsquedas o filtrado.
+description: Una descripción más detallada del producto.
+measures: Las medidas físicas del producto, como ancho, alto y profundidad.
+characteristic: Características adicionales del producto, en este caso, el volumen.
+options: Un objeto que contiene diferentes opciones de compra para el producto. Cada opción tiene su propio precio, valor, unidades y URL de imagen.
