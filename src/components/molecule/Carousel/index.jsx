@@ -45,7 +45,7 @@ export const Carousel = () => {
           <img
             key={index}
             src={imgUrl}
-            className={`w-14 h-14 rounded-lg cursor-pointer ${
+            className={`w-14 h-14 rounded-lg cursor-pointer aspect-square ${
               index === currentSlide
                 ? "border-1 border-solid border-[#FFC39E] drop-shadow-md"
                 : ""

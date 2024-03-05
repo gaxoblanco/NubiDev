@@ -78,7 +78,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
       <div className="bg-[#FFC39E] absolute h-full right-0 rounded-xl container-addCart p-4">
         <div className="container-addCart--img relative pt-12 border-solid border-b-2 border-[#FFF6E5] pb-8">
           <img
-            className="img-productCardSmall mr-4"
+            className="img-productCardSmall mr-4 aspect-square"
             src={itemData.img.url1}
             alt={itemData.img.alt}
           />

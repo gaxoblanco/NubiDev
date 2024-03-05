@@ -30,3 +30,8 @@ body {
     margin-top: 10px;
     padding-left: 10px;
 }
+
+.accent-secondary{
+    accent-color: #ffc39e;
+}
+/* cuando esta el focu */

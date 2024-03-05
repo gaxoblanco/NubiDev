@@ -69,7 +69,7 @@ export const CardPrice = () => {
                 key={index}
                 src={option.img}
                 alt={option.value} // paso el value como un alt para personas con lectores de pantalla
-                className={`w-12 h-12 rounded-lg cursor-pointer`}
+                className={`w-12 h-12 rounded-lg cursor-pointer aspect-square`}
                 onMouseOver={(e) => {
                   e.target.style.transform = "scale(1.1)";
                   e.target.style.zIndex = "1";

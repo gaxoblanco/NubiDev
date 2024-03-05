@@ -5,7 +5,7 @@
 }
 
 .product-card--img {
-    /* width:100%; */
+    width:100%;
     max-height: auto;
     object-fit: cover;
     margin-right: 10px;

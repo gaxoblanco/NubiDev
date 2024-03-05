@@ -34,7 +34,7 @@ export const ProductCard = ({
         </OnOff>
         <figure>
           <img
-            className="product-card--img rounded-lg min-h-52"
+            className="aspect-square rounded-lg min-h-52"
             src={product.img.url1}
             alt={product.img.alt}
             width={100 + "%;"}

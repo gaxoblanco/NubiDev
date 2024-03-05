@@ -61,7 +61,7 @@ export const ProductList = () => {
           <input
             type="text"
             placeholder="Buscar productos"
-            className="p-1 mr-[-2rem] rounded-md"
+            className="p-1 mr-[-2rem] rounded-md w-full accent-secondary"
           />
           <button type="submit" className="w-8 p-1.5 absolute">
             <svg fill="currentColor" viewBox="0 0 16 16">
