@@ -82,7 +82,7 @@ export const ProductCard = ({
           </div>
         </div>
       </section>
-      <a href="#" className="absolute top-4 right-6">
+      <a href="#" className="absolute top-[0.9rem] right-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"

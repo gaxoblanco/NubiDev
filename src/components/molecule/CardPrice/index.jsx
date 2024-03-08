@@ -43,12 +43,12 @@ export const CardPrice = () => {
       className="grid w-full rounded-xl bg-[#FFC39E] top-8 right-[6rem] p-3"
       id="informationModal"
     >
-      <div className="py-4 border-solid border-b-2 border-[#FFF6E5]">
+      <div className="py-4 border-solid border-b-2 border-background">
         {/* agregar la variable que define si se entrega o no en el dia */}
         <p>Entrega en el dia</p>
       </div>
-      <section className="py-4 border-solid border-b-2 border-[#FFF6E5]">
-        <p className="text-lg font-medium text-[#5E483A]">
+      <section className="py-4 border-solid border-b-2 border-background">
+        <p className="text-lg font-medium text-text">
           Cantidad minima por caja
         </p>
         <a className="text-2xl font-semibold pl-4">10 u - $120</a>
@@ -60,7 +60,7 @@ export const CardPrice = () => {
       </section>
       {/* variacion de color/opcion suponiendo que existe */}
       {Array.isArray(options) ? (
-        <section className="py-4 border-solid border-b-2 border-[#FFF6E5]">
+        <section className="py-4 border-solid border-b-2 border-background">
           <h3 className="mb-2">Variacion</h3>
           {/* listado de imgs con la imagen de las variaciones  */}
           <div className="flex gap-4 bg-[#FBD5CA] p-4 rounded-xl min-w-[90px] mb-6 place-content-evenly">

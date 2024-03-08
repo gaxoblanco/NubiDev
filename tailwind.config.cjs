@@ -41,7 +41,11 @@ module.exports = {
       },
     },
     colors: {
-      "peach-fuzz--300": "#FEE2D4",
+      primary: "#FFC39E",
+      secondary: "#fbd5ca",
+      icons: "#BF8B5E",
+      background: "#FEFEF5",
+      text: "#5E483A",
     },
   },
   variants: {

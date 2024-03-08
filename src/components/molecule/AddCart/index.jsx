@@ -75,8 +75,8 @@ export const AddCart = ({ units, setUnits, itemData }) => {
 
   return (
     <span>
-      <div className="bg-[#FFC39E] absolute h-full right-0 rounded-xl container-addCart p-4">
-        <div className="container-addCart--img relative pt-12 border-solid border-b-2 border-[#FFF6E5] pb-8">
+      <div className="bg-primary absolute h-full right-0 rounded-xl container-addCart p-4">
+        <div className="container-addCart--img relative pt-12 border-solid border-b-2 border-background pb-8">
           <img
             className="img-productCardSmall mr-4 aspect-square"
             src={itemData.img.url1}
@@ -103,7 +103,7 @@ export const AddCart = ({ units, setUnits, itemData }) => {
         {/* itero options */}
         {Array.isArray(options) ? (
           options.map((option, index) => (
-            <div className="flex gap-3 place-content-around my-4 border-solid border-b-2 border-[#FFF6E5]">
+            <div className="flex gap-3 place-content-around my-4 border-solid border-b-2 border-background">
               <img
                 key={index}
                 className="img-productCardSmall mb-4 mr-4 w-14 h-14"
