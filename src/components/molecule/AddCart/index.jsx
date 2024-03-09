@@ -33,9 +33,9 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     },
   };
 
-  console.log(itemData);
   // Declara un estado para totalUnits
-  const [totalUnits, setTotalUnits] = useState(0);
+  // const [totalUnits, setTotalUnits] = useState(0);
+  const [totalUnits, setTotalUnits] = useState([]);
 
   //agrego al carrito itemData
   const handleAddToCart = (selectOptions) => () => {
@@ -50,16 +50,24 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   const [optionWorking, setOptionWorking] = useState({});
   // userEfect para un console log donde veo el selectOptions
   useEffect(() => {
-    //valido que selectOptions sea un objeto
+    // Valida que selectOptions sea un objeto
     if (selectOptions[0]) {
       console.log("useEffect- selectOptions", selectOptions);
-      let object = selectOptions[0];
-      console.log("optionWorking---", optionWorking);
 
-      // valido que optionWorking tenga el campo price
-      if (optionWorking["price"] != null) {
-        setTotalUnits(object["unit"] * optionWorking["price"]);
-      }
+      // Obtengo el indice del elemento que se esta modificando
+      const index = selectOptions.findIndex(
+        (option) => option.value === optionWorking.value
+      );
+      console.log(
+        "useEffect- index elemente working",
+        selectOptions[index].unit
+      );
+
+      // a setTotalUnits en el index le paso el valor de la unidad
+      setTotalUnits((prevState) => {
+        prevState[index] = optionWorking.price * selectOptions[index].unit;
+        return [...prevState];
+      });
     }
   }, [selectOptions, unit]);
 
@@ -68,10 +76,6 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     console.log("itemData", itemData);
     console.log("chek", itemData["options"][1]["price"]);
   }, [totalUnits]);
-
-  useEffect(() => {
-    console.log("optionWorking--xxx", optionWorking);
-  }, [optionWorking]);
 
   return (
     <span>
@@ -126,7 +130,10 @@ export const AddCart = ({ units, setUnits, itemData }) => {
               />
               {/* atom - cantidad de productos */}
               <Price>
-                ${totalUnits ? totalUnits : itemData["options"][index]["price"]}
+                $
+                {totalUnits[index]
+                  ? totalUnits[index]
+                  : itemData["options"][index]["price"]}
               </Price>
             </div>
           ))
