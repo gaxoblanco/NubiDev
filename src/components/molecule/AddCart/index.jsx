@@ -16,9 +16,6 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   //unidades y precio total segun unidades
   const [unit, setUnit] = useState(1);
   const [selectOptions, setSelectOptions] = useState([]); // Estado para almacenar las opciones seleccionadas
-  // Calculamos el precio total según las unidades
-  // const total =
-  //   (itemData.price ? itemData.price : itemData.itemData.price) * unit;
 
   const item = {
     _id: itemData._id,
@@ -50,24 +47,21 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   const [optionWorking, setOptionWorking] = useState({});
   // userEfect para un console log donde veo el selectOptions
   useEffect(() => {
-    // Valida que selectOptions sea un objeto
     if (selectOptions[0]) {
       console.log("useEffect- selectOptions", selectOptions);
 
-      // Obtengo el indice del elemento que se esta modificando
-      const index = selectOptions.findIndex(
-        (option) => option.value === optionWorking.value
-      );
-      console.log(
-        "useEffect- index elemente working",
-        selectOptions[index].unit
-      );
+      const newTotalUnits = {}; // Creamos un nuevo objeto para actualizar el estado totalUnits
 
-      // a setTotalUnits en el index le paso el valor de la unidad
-      setTotalUnits((prevState) => {
-        prevState[index] = optionWorking.price * selectOptions[index].unit;
-        return [...prevState];
+      // Recorremos las opciones seleccionadas
+      selectOptions.forEach((option) => {
+        // Calculamos el precio total para cada opción
+        const totalPrice = option.price * option.unit;
+        // Actualizamos el estado newTotalUnits usando el id de la opción como clave
+        newTotalUnits[option.value] = totalPrice;
       });
+
+      // Actualizamos el estado totalUnits con el nuevo objeto
+      setTotalUnits(newTotalUnits);
     }
   }, [selectOptions, unit]);
 
@@ -107,14 +101,14 @@ export const AddCart = ({ units, setUnits, itemData }) => {
         {/* itero options */}
         {Array.isArray(options) ? (
           options.map((option, index) => (
-            <div className="flex gap-3 place-content-around my-4 border-solid border-b-2 border-background">
+            <div className="flex items-center gap-3 place-content-around my-4 border-solid border-b-2 border-background">
               <img
                 key={index}
                 className="img-productCardSmall mb-4 mr-4 w-14 h-14"
                 src={option.img}
                 alt={option.value}
               />
-              <p>{option.value}</p>
+              <p className="mb-4 w-40">{option.value}</p>
               {/* atom - cantidad de productos */}
               <AddProduct
                 setSelectOptions={setSelectOptions}
@@ -129,12 +123,12 @@ export const AddCart = ({ units, setUnits, itemData }) => {
                 }
               />
               {/* atom - cantidad de productos */}
-              <Price>
-                $
-                {totalUnits[index]
-                  ? totalUnits[index]
-                  : itemData["options"][index]["price"]}
-              </Price>
+              <p className="text-lg mb-[-2.4rem]">
+                ${itemData["options"][index]["price"]}
+              </p>
+              <p className="text-2xl">
+                ${totalUnits[option.value] ? totalUnits[option.value] : 0}
+              </p>
             </div>
           ))
         ) : (
