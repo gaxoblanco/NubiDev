@@ -13,26 +13,27 @@ export const ProductList = () => {
   const { products } = state;
   const { searchPro } = state;
 
+  const [filters, setFilters] = React.useState([
+    { name: "Promociones", isActive: false },
+    { name: "Blanco", isActive: false },
+    { name: "Negro", isActive: false },
+    { name: "Color", isActive: false },
+    { name: "En stock", isActive: false },
+    { name: "Entrega Hoy", isActive: false },
+  ]);
+
   //actualiza la cantidad deseada del item -- Bug que al guardas crea un objeto nuevo en lugar de actualizar
   const unitsProduct = (ItemUnits) => {
     setItemData(ItemUnits);
   };
 
-  const [isActive1, setIsActive1] = React.useState(false);
-  const [isActive2, setIsActive2] = React.useState(false);
-  const [isActive3, setIsActive3] = React.useState(false);
-
-  // Puedes definir una función de manejo para cada instancia
-  const handleToggle1 = () => {
-    setIsActive1(!isActive1);
-  };
-
-  const handleToggle2 = () => {
-    setIsActive2(!isActive2);
-  };
-
-  const handleToggle3 = () => {
-    setIsActive3(!isActive3);
+  // Manejador de eventos para cambiar el estado de un filtro dado su índice
+  const handleToggleFilter = (index) => {
+    setFilters((prevFilters) => {
+      const updatedFilters = [...prevFilters];
+      updatedFilters[index].isActive = !updatedFilters[index].isActive;
+      return updatedFilters;
+    });
   };
 
   let imgSize = 260;
@@ -70,14 +71,13 @@ export const ProductList = () => {
           </button>
         </form>
         <div>
-          {activeFilter("Promociones", isActive1, handleToggle1)}
-
-          {activeFilter("Blanco", isActive2, handleToggle2)}
-          {activeFilter("Negro", isActive3, handleToggle3)}
-          {activeFilter("Color", isActive3, handleToggle3)}
-
-          {activeFilter("En stock", isActive3, handleToggle3)}
-          {activeFilter("Entrega Hoy", isActive3, handleToggle3)}
+          {filters.map((filter, index) => (
+            <div key={index}>
+              {activeFilter(filter.name, filter.isActive, () =>
+                handleToggleFilter(index)
+              )}
+            </div>
+          ))}
         </div>
       </section>
 

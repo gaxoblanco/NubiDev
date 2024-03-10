@@ -16,6 +16,8 @@ export const AddCart = ({ units, setUnits, itemData }) => {
   //unidades y precio total segun unidades
   const [unit, setUnit] = useState(1);
   const [selectOptions, setSelectOptions] = useState([]); // Estado para almacenar las opciones seleccionadas
+  // Declara un estado para totalUnits
+  const [totalUnits, setTotalUnits] = useState([]);
 
   const item = {
     _id: itemData._id,
@@ -30,26 +32,21 @@ export const AddCart = ({ units, setUnits, itemData }) => {
     },
   };
 
-  // Declara un estado para totalUnits
-  // const [totalUnits, setTotalUnits] = useState(0);
-  const [totalUnits, setTotalUnits] = useState([]);
-
   //agrego al carrito itemData
   const handleAddToCart = (selectOptions) => () => {
-    console.log("handleAddToCart", selectOptions); // obengo un array de opciones sobre el itemProduct
-    addToCart(item); // pasar selectOptions en lugarde item ----------------------------------------------------------------
+    // console.log("handleAddToCart", selectOptions); // obengo un array de opciones sobre el itemProduct
+    addToCart(item); // pasar selectOptions en lugarde item
     setUnits(false);
   };
-  const handleEdditToProduct = (item) => () => {
-    edditToCart(item);
-    setUnits(false);
-  };
+  // const handleEdditToProduct = (item) => () => {
+  //   edditToCart(item);
+  //   setUnits(false);
+  // };
   const [optionWorking, setOptionWorking] = useState({});
   // userEfect para un console log donde veo el selectOptions
   useEffect(() => {
     if (selectOptions[0]) {
-      console.log("useEffect- selectOptions", selectOptions);
-
+      // console.log("useEffect- selectOptions", selectOptions);
       const newTotalUnits = {}; // Creamos un nuevo objeto para actualizar el estado totalUnits
 
       // Recorremos las opciones seleccionadas
@@ -64,12 +61,6 @@ export const AddCart = ({ units, setUnits, itemData }) => {
       setTotalUnits(newTotalUnits);
     }
   }, [selectOptions, unit]);
-
-  useEffect(() => {
-    console.log("useEffect- totalUnits", totalUnits);
-    console.log("itemData", itemData);
-    console.log("chek", itemData["options"][1]["price"]);
-  }, [totalUnits]);
 
   return (
     <span>
